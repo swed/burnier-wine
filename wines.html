@@ -20,7 +20,7 @@
         <nav
           class="hidden lg:flex w-2/5 justify-end items-center gap-10 whitespace-nowrap font-apparel text-[16px] font-normal leading-tight text-paper/90">
 
-          <a href="/wines.html" class="h-20 inline-flex items-center hover:text-paper transition">
+          <a href="#" class="h-20 inline-flex items-center hover:text-paper transition">
             <span
               class="relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:h-px after:bg-gold after:-bottom-1.5 after:opacity-0 hover:after:opacity-100 transition">
               Вина
@@ -244,7 +244,7 @@
 
         <nav class="flex-1">
           <!-- Главный активный пункт (Золотой текст) -->
-          <a href="/wines.html"
+          <a href=" #"
             class="mm-item block font-apparel text-[28px] font-medium leading-tight text-gold mb-8 transition-colors"
             style="--i:1">Вина</a>
 
@@ -326,472 +326,620 @@
 
 
 
-  <!-- ========================= HERO BLOCK ========================= -->
-  <section class="relative w-full flex items-center bg-dark" style="height: calc(100vh - 80px); min-height: 560px;">
 
-    <!-- 1. Фоновое изображение -->
-    <picture class="absolute inset-0 z-0">
-      <!-- Отдаем архитектуру без дерева всем телефонам, планшетам и мелким ноутам (до 1279px) -->
-      <source media="(max-width: 1279px)" srcset="img/hero_m.jpg">
-      <!-- Начиная с 1280px (xl) включаем центрирование десктопа. Всё, что меньше — жестко прибито к правому нижнему углу -->
-      <img src="./img/hero_d.jpg" alt="Винодельческий дом Бюрнье"
-        class="w-full h-full object-cover object-[right_bottom] xl:object-right" draggable="false" />
-    </picture>
-
-    <!-- 2. Мягкая тень для шапки (Короткая на мобиле, длинная и сверхплавная на десктопе)
-    <div
-      class="absolute top-0 inset-x-0 h-24 md:h-56 bg-gradient-to-b from-dark/30 via-dark/[0.02] to-transparent z-10 pointer-events-none">
-    </div> -->
-
-    <!-- 3. Очень легкая защита слева для мобилок (Убавили до /30, чтобы спасти розовое небо) -->
-    <div class="absolute inset-0 bg-gradient-to-r from-dark/25 to-transparent xl:hidden z-10 pointer-events-none"></div>
-
-    <!-- 4. Контент -->
-    <div class="relative z-20 w-full max-w-7xl mx-auto px-6">
-
-      <!-- Ограничитель ширины: на мобилках 85% экрана (чтобы не липнуть к краю), на десктопе 3xl -->
-      <div class="max-w-[85%] sm:max-w-xl lg:max-w-3xl text-paper -mt-12 md:-mt-20 drop-shadow-lg lg:drop-shadow-none">
-
-        <!-- Возвращаем Золото и увеличиваем шрифт для планшетов -->
-        <span
-          class="block font-montserrat text-[11px] md:text-[12px] text-gold font-bold uppercase tracking-[0.2em] mb-4">
-          Винодельческий дом Бюрнье
-        </span>
-
-        <!-- H1 -->
-        <h1 class="font-apparel text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight mb-6 tracking-tight">
-          Швейцарское <br class="sm:hidden">наследие.<br> Русский терруар.
-        </h1>
-
-        <!-- Подзаголовок -->
-        <p
-          class="font-montserrat text-[16px] md:text-lg text-paper/90 leading-relaxed mb-12 lg:mb-16 font-light relative z-20">
-          Премиальные вина, созданные потомственным швейцарским виноделом. Бескомпромиссное качество, ручной сбор и
-          уважение к природе с 2001 года.
-        </p>
-
-        <!-- Кнопки (одинакового размера) -->
-        <div class="flex flex-col sm:flex-row items-start gap-4 relative z-20">
-
-          <!-- Primary Button -->
-          <a href="#"
-            class="w-auto min-w-[260px] inline-flex justify-center items-center px-8 py-4 border border-transparent bg-wine text-paper font-montserrat text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-dark transition-colors duration-300">
-            Коллекция вин
-          </a>
-
-          <!-- Secondary Button -->
-          <a href="#"
-            class="w-auto min-w-[260px] inline-flex justify-center items-center px-8 py-4 border border-paper/60 bg-transparent text-paper font-montserrat text-[11px] font-bold uppercase tracking-widest hover:bg-paper hover:text-dark transition-colors duration-300">
-            Визит на винодельню
-          </a>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- Контейнер для всей страницы ниже Hero, чтобы текстура была единой -->
-  <main class="relative bg-paper overflow-hidden">
+  <main class="relative bg-paper overflow-clip min-h-[calc(100vh-80px)]">
 
-    <!-- Текстура бумаги -->
+    <!-- Текстура бумаги для всей страницы -->
     <div class="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-multiply bg-repeat"
       style="background-image: url('img/background.webp');"></div>
 
-    <!-- Блок Коллекции: уменьшили py-24 до py-12, чтобы сэкономить место сверху и снизу -->
-    <!-- Убавили верхние и нижние отступы секции (pt-6, pb-4) -->
-    <section
-      class="relative z-10 pt-6 pb-4 xl:pt-10 xl:pb-6 min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 w-full flex flex-col h-full relative">
+    <!-- ========================= CATALOG HEADER ========================= -->
+    <!-- Уменьшили размер заголовка, сделали его аккуратнее, изменили текст -->
+    <h1 class="sr-only">Коллекция вин Бюрнье</h1>
 
+    <!-- ========================= STICKY FILTER BAR ========================= -->
+    <section class="relative z-40 sticky top-[80px]">
 
-        <!-- Заголовок: Сделали отступ вниз (mb-4 md:mb-6) равным отступу под бутылкой -->
-        <div class="sr-only">
-          <h2>Коллекция вин</h2>
-        </div>
+      <!-- ФОН ПАНЕЛИ: Точная копия фона страницы (Цвет + Текстура).
+           Делает панель непрозрачной (бутылки скроются), но визуально бесшовной -->
+      <div class="absolute inset-0 bg-paper"></div>
+      <div class="absolute inset-0 opacity-40 mix-blend-multiply bg-repeat pointer-events-none"
+        style="background-image: url('img/background.webp');"></div>
 
-        <!-- Слайдер: Контейнер -->
-        <div class="flex flex-col items-center justify-center">
+      <!-- Контент панели -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col">
 
-          <!-- Сцена с бутылками (Возврат к стабильной absolute-версии) -->
+        <div class="flex flex-row justify-between items-center py-5">
+          <!-- Левая часть -->
+          <div class="hidden md:block font-montserrat text-[10px] font-bold uppercase tracking-[0.2em] text-dark/40">
+            ВИН: <span id="js-wine-count">22</span>
+          </div>
+
+          <!-- Правая часть -->
           <div
-            class="relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[340px] flex justify-center items-center mb-4 xl:mb-8 h-[40vh] md:h-[45vh] md:portrait:h-[50vh] lg:portrait:h-[56vh] xl:h-[45vh] max-xl:landscape:h-[40vh] min-h-[280px]">
-
-            <!-- ЛЕВАЯ БУТЫЛКА (Увеличен blur, снижена opacity, поднята выше -translate-y-[65%], отодвинута дальше right-[130%]) -->
-            <div
-              class="js-scene relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[340px] flex justify-center items-center mb-4 xl:mb-8 h-[40vh] md:h-[45vh] md:portrait:h-[50vh] lg:portrait:h-[56vh] xl:h-[45vh] max-xl:landscape:h-[40vh] min-h-[280px] touch-pan-y [--bottle-x:23] md:landscape:[--bottle-x:30] lg:portrait:[--bottle-x:26] lg:landscape:[--bottle-x:34] xl:[--bottle-x:38]">
-              <!-- бутылки рендерятся JS из массива wines -->
-            </div>
-
-          </div>
-
-          <!-- Текст: Расширили до max-w-xl, вернули ось симметрии -->
-          <div class="js-slide transition-opacity duration-500 text-center max-w-xl px-2 xl:px-4">
-            <h3 class="mb-2">
-              <a class="js-name block font-apparel text-3xl xl:text-4xl text-dark uppercase tracking-widest cursor-pointer transition-colors duration-300 hover:text-wine"
-                href="#" style="text-decoration:none;">
-                Красностоп
-              </a>
-            </h3>
-
-            <div
-              class="js-style font-montserrat text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60 mb-4">
-              Красное сухое • 2015
-            </div>
-
-            <!-- Описание: Шрифт 12px мобила, 14px десктоп. Отступ вниз mb-5 -->
-            <p
-              class="js-description font-montserrat text-[12px] xl:text-[14px] text-dark/60 leading-relaxed mb-4 italic">
-              Самобытное и многогранное вино из российского автохтона Красностоп Золотовский. Глубокий сложный аромат с
-              многообразием оттенков: подвяленные черные ягоды, кожа, специи, кофе и тёмный шоколад.
-            </p>
-
-            <!-- Покупка: gap-5 задает ровное расстояние между ценой и кнопкой -->
-            <div class="flex flex-col items-center justify-center gap-4">
-              <span class="js-price font-montserrat text-2xl font-light text-dark tracking-wide">10 500 ₽</span>
-              <button
-                class="js-buy-btn px-12 py-3 bg-wine text-paper font-montserrat text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-dark transition-all duration-300">
-                Купить
-              </button>
-            </div>
+            class="flex items-center gap-6 md:gap-8 overflow-x-auto no-scrollbar w-full md:w-auto justify-start md:justify-end">
+            <button
+              class="js-filter-btn font-montserrat text-[10px] font-bold uppercase tracking-widest text-wine whitespace-nowrap transition-colors cursor-pointer"
+              data-filter="all">
+              Все вина
+            </button>
+            <button
+              class="js-filter-btn font-montserrat text-[10px] font-bold uppercase tracking-widest text-dark/40 hover:text-wine whitespace-nowrap transition-colors cursor-pointer"
+              data-filter="white">
+              Белые
+            </button>
+            <button
+              class="js-filter-btn font-montserrat text-[10px] font-bold uppercase tracking-widest text-dark/40 hover:text-wine whitespace-nowrap transition-colors cursor-pointer"
+              data-filter="red">
+              Красные
+            </button>
+            <button
+              class="js-filter-btn font-montserrat text-[10px] font-bold uppercase tracking-widest text-dark/40 hover:text-wine whitespace-nowrap transition-colors cursor-pointer"
+              data-filter="rose">
+              Розе
+            </button>
           </div>
         </div>
 
-        <!-- Подвал слайдера -->
-        <!-- Подвал слайдера: mt-6 вместо mt-12, pt-4 вместо pt-6 -->
-        <div
-          class="mt-6 flex flex-col md:flex-row items-center justify-between border-t border-dark/10 pt-4 relative w-full">
-
-          <div class="hidden md:block w-1/3"></div>
-
-          <!-- Точки слайдера -->
-          <div class="flex gap-3 justify-center w-full md:w-1/3 mb-6 md:mb-0">
-            <button data-index="0" aria-label="Слайд 1" class="js-dot w-2 h-2 rounded-full bg-wine"></button>
-            <button data-index="1" aria-label="Слайд 2"
-              class="js-dot w-2 h-2 rounded-full border border-dark/30 hover:border-wine transition-colors cursor-pointer"></button>
-            <button data-index="2" aria-label="Слайд 3"
-              class="js-dot w-2 h-2 rounded-full border border-dark/30 hover:border-wine transition-colors cursor-pointer"></button>
-            <button data-index="3" aria-label="Слайд 4"
-              class="js-dot w-2 h-2 rounded-full border border-dark/30 hover:border-wine transition-colors cursor-pointer"></button>
-          </div>
-
-          <!-- Ссылка "Вся коллекция" -->
-          <div class="w-full md:w-1/3 flex justify-center md:justify-end">
-            <a href="#"
-              class="font-montserrat uppercase tracking-widest text-[10px] md:text-[11px] font-bold text-dark hover:text-[#5D1223] transition-colors duration-300 flex items-center group">
-
-              Вся коллекция
-              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-
-        </div>
+        <!-- ЛИНИЯ: Теперь она внутри контейнера и не тянется на весь экран -->
+        <div class="w-full h-px bg-dark/10"></div>
 
       </div>
     </section>
 
+    <!-- ========================= CATALOG GRID ========================= -->
+    <section class="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-16 min-h-[70vh]">
+      <div
+        class="js-catalog-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24 lg:gap-y-32 transition-opacity duration-300">
 
-
-
-    <!-- ============================================================
-  ШАХМАТКА: ПРЕМИУМ-ВЕРСИЯ
-  — Используем grid для десктопа, меняем порядок через order.
-  — Убрали vh, используем min-h и padding для стабильности.
-  — Увеличили размер шрифтов для "дороговизны" восприятия.
-============================================================ -->
-    <!-- SEO-only заголовок секции -->
-    <h2 class="sr-only">Опыт и впечатления — винный туризм и эко-глэмпинг</h2>
-
-    <section class="relative z-10 py-12 xl:py-0">
-      <div class="max-w-7xl mx-auto xl:px-6">
-
-        <!-- На xl: шахматка. На мобиле: стек карточек с gap -->
-        <div class="flex flex-col xl:grid xl:grid-cols-2 gap-16 xl:gap-0
-            xl:min-h-[calc(100dvh-80px)]">
-
-          <!-- ROW 1 -->
-          <!-- На мобиле это flex-колонка с отступом между фото и текстом. На xl — растворяется в Grid -->
-          <div class="flex flex-col xl:contents">
-
-            <!-- TEXT (В коде идет первым для десктопа, но на мобиле опускаем его вниз через order-2) -->
-            <div class="order-2 xl:order-none bg-wine flex flex-col justify-center items-start
-                    px-8 py-12 sm:px-12 xl:px-16 xl:py-10 landscape:xl:py-6 group">
-              <!-- ... твой контент текста (span, h3, div, p, a) остается без изменений ... -->
-              <span class="block font-montserrat text-[11px] font-bold uppercase tracking-[0.3em] text-gold mb-5">
-                Искусство виноделия
-              </span>
-              <h3
-                class="font-apparel text-[1.75rem] sm:text-[2.5rem] xl:text-[2.5rem] leading-[1.1] sm:leading-[1.06] text-paper mb-5">
-                Философия органического виноделия
-              </h3>
-              <div class="w-16 h-px bg-gold mb-8 transition-all duration-[1000ms] ease-in-out xl:group-hover:w-24">
-              </div>
-              <p
-                class="font-montserrat text-[13px] xl:text-[14px] font-light text-paper/75 leading-relaxed mb-10 text-pretty">
-                Откройте для себя скрытую сторону создания великих вин. Приглашаем вас на неспешную прогулку по
-                виноградникам и спуск в прохладные погреба для дегустации наших лучших винтажей.
-              </p>
-              <a href="/tourism"
-                class="self-start inline-flex items-center justify-center px-8 py-4 border border-gold/40 hover:border-gold bg-transparent relative overflow-hidden group/btn transition-colors duration-500">
-                <span
-                  class="relative z-10 font-montserrat text-[11px] font-bold uppercase tracking-widest text-gold group-hover/btn:text-dark transition-colors duration-500">
-                  Перейти к программам
-                </span>
-                <div
-                  class="absolute inset-0 bg-gold transform translate-y-[105%] group-hover/btn:translate-y-0 transition-transform duration-500 ease-in-out">
-                </div>
-              </a>
-            </div>
-
-            <!-- IMAGE (На мобиле поднимаем наверх через order-1) -->
-            <div class="order-1 xl:order-none overflow-hidden aspect-video xl:aspect-auto group">
-              <!-- ... твоя картинка (picture) без изменений ... -->
-              <picture class="block w-full h-full">
-                <source srcset="img/chess-tourism.avif" type="image/avif" />
-                <source srcset="img/chess-tourism.webp" type="image/webp" />
-                <img src="./img/chess-tourism.jpg" alt="Винный туризм — погреба и дегустация"
-                  class="w-full h-full object-cover object-left-center" loading="lazy" decoding="async" width="1200"
-                  height="800" draggable="false" />
-              </picture>
-            </div>
-
+        <!-- 1: ЭКСПОНАТ БЕЛОЕ -->
+        <a href="/wines/exhibit_white.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/love_white.avif" type="image/avif">
+              <source srcset="img/bottles/love_white.webp" type="image/webp">
+              <img src="./img/bottles/love_white.png" alt="Экспонат" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
           </div>
-
-          <!-- ROW 2 -->
-          <div class="flex flex-col xl:contents">
-
-            <!-- IMAGE -->
-            <div class="overflow-hidden
-                    aspect-video xl:aspect-auto group">
-              <picture class="block w-full h-full">
-                <source srcset="img/chess-glamping.avif" type="image/avif" />
-                <source srcset="img/chess-glamping.webp" type="image/webp" />
-                <img src="./img/chess-glamping.jpg" alt="Эко-глэмпинг — премиальные дома среди лоз"
-                  class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="800"
-                  draggable="false" />
-              </picture>
-            </div>
-
-            <!-- TEXT -->
-            <div class=" bg-dark flex flex-col justify-center items-start
-                    px-8 py-12 sm:px-12 xl:px-16 xl:py-10 landscape:xl:py-6 group">
-
-              <span class="block font-montserrat text-[11px] font-bold uppercase
-                       tracking-[0.3em] text-gold mb-5">
-                Эко-глэмпинг
-              </span>
-
-              <h3 class="font-apparel text-[1.75rem] sm:text-[2.5rem] xl:text-[2.5rem] leading-[1.1] sm:leading-[1.06]
-                     text-paper mb-5">
-                Премиальный комфорт среди лоз
-              </h3>
-
-              <div class="w-16 h-px bg-gold mb-8 transition-all duration-[1000ms] ease-in-out xl:group-hover:w-24">
-              </div>
-
-              <p class="font-montserrat text-[13px] xl:text-[14px] font-light text-paper/75
-                    leading-relaxed mb-10 text-pretty">
-                Просыпайтесь под шелест листьев вблизи природного заказника «Красная Горка». Наши автономные дома
-                из премиальных экоматериалов объединяют панорамный вид на виноградники, абсолютную тишину
-                и систему «Умный дом» для вашего уединения.
-              </p>
-
-              <a href="/glamping"
-                class="self-start inline-flex items-center justify-center px-8 py-4 border border-paper/30 hover:border-gold bg-transparent relative overflow-hidden group/btn transition-colors duration-500">
-                <span
-                  class="relative z-10 font-montserrat text-[11px] font-bold uppercase tracking-widest text-paper group-hover/btn:text-dark transition-colors duration-500">
-                  Перейти к глэмпингу
-                </span>
-                <div
-                  class="absolute inset-0 bg-gold transform translate-y-[105%] group-hover/btn:translate-y-0 transition-transform duration-500 ease-in-out">
-                </div>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-     БЛОК 2: НОВОСТИ И СОБЫТИЯ
-     ============================================================ -->
-    <!-- SECTION: JOURNAL / NEWS -->
-    <section class="py-16 xl:py-24">
-      <!-- <div class="max-w-7xl mx-auto px-6 xl:px-20"></div> -->
-      <div class="max-w-7xl mx-auto px-6">
-
-        <!-- HEADER -->
-        <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-12 xl:mb-16">
           <div>
-            <span
-              class="text-[#C7A46A] uppercase tracking-[0.4em] text-[10px] mb-4 block font-montserrat font-bold">Журнал</span>
-            <h2 class="text-4xl xl:text-5xl font-serif text-[#1F1F1F] leading-tight">Новости и события</h2>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Экспонат</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2024</p>
           </div>
+        </a>
 
-        </div>
-
-        <!-- MAIN CONTAINER (Desktop: 50/50 Flex, Tablet/Mobile: Stacked) -->
-        <div class="flex flex-col xl:flex-row gap-12 xl:gap-20">
-
-          <!-- LEFT COLUMN: MAIN NEWS -->
-          <div class="w-full xl:w-[60%] flex flex-col group cursor-pointer">
-            <!-- Image 16:9 -->
-            <div class="overflow-hidden aspect-video mb-6 relative">
-              <picture class="block w-full h-full">
-                <!--<source srcset="/img/news-main.avif" type="image/avif" />
-            <source srcset="/img/news-main.webp" type="image/webp" /> -->
-                <img src="./img/hero_d.jpg" alt="Главная новость" class="w-full h-full object-cover" loading="lazy"
-                  decoding="async" draggable="false">
-              </picture>
-            </div>
-
-            <!-- Meta (Tag + Date) -->
-            <div class="flex items-center gap-4 mb-4 font-montserrat text-[10px] uppercase tracking-widest">
-              <span class="text-[#C7A46A] font-bold">Виноградник</span>
-              <span class="text-[#1F1F1F]/50">15 Сентября 2024</span>
-            </div>
-
-            <!-- Title -->
-            <h3 class="font-apparel text-[1.75rem] sm:text-[2rem] text-[#1F1F1F] leading-[1.15] mb-4 text-pretty">
-              Начало сбора урожая 2024: рекордный год для красных сортов
-            </h3>
-
-            <!-- Excerpt -->
-            <p
-              class="font-montserrat text-[14px] font-light text-[#1F1F1F]/70 leading-relaxed mb-6 text-pretty max-w-[90%]">
-              Этот сезон обещает стать особенным. Идеальный баланс осадков и солнечных дней позволил ягодам достичь
-              фенольной зрелости, что гарантирует винтажу невероятный потенциал.
-            </p>
-
-            <!-- Link -->
-            <span
-              class="font-montserrat uppercase tracking-widest text-[10px] font-bold text-[#5D1223] inline-flex items-center">
-              Читать <span
-                class="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">→</span>
-            </span>
+        <!-- 2: ЭКСПОНАТ КРАСНОЕ -->
+        <a href="/wines/exhibit_red.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/exhibit_red.avif" type="image/avif">
+              <source srcset="img/bottles/exhibit_red.webp" type="image/webp">
+              <img src="./img/bottles/exhibit_red.png" alt="Экспонат" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
           </div>
-
-          <!-- VISUAL DIVIDER (TABLET/MOBILE ONLY) -->
-          <div class="w-full xl:hidden h-px bg-[#1F1F1F]/10 -my-2"></div>
-
-          <!-- RIGHT COLUMN: SECONDARY NEWS -->
-
-          <!-- RIGHT COLUMN: SECONDARY NEWS -->
-          <!-- На мобиле: 1 колонка. На планшетах (md, lg): 2 колонки рядом. На десктопе (xl): снова 1 колонка (друг под другом) -->
-          <div class="w-full xl:w-[40%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-12 md:gap-8 xl:gap-0">
-
-            <!-- SIDE NEWS ITEM 1 -->
-            <div class="flex flex-col group cursor-pointer xl:mb-16">
-
-              <!-- Сетка внутри карточки. 
-                   Мобила/Планшет: 1 колонка (все друг под другом). 
-                   Десктоп (xl): 3 колонки (картинка 2/3, мета 1/3) -->
-              <div class="grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 xl:gap-y-5">
-
-                <!-- Thumbnail -->
-                <div class="col-span-1 xl:col-span-2 aspect-video overflow-hidden shrink-0">
-                  <picture class="block w-full h-full">
-                    <source srcset="img/chess-glamping.avif" type="image/avif" />
-                    <source srcset="img/chess-glamping.webp" type="image/webp" />
-                    <img src="./img/chess-glamping.jpg" alt="Событие 1" class="w-full h-full object-cover" loading="lazy"
-                      decoding="async" draggable="false">
-                  </picture>
-                </div>
-
-                <!-- Meta (Tag + Date) -->
-                <div
-                  class="col-span-1 xl:col-span-1 flex flex-row xl:flex-col items-center xl:items-start justify-start pt-1 gap-4 xl:gap-0">
-                  <span
-                    class="text-[#C7A46A] uppercase tracking-widest text-[10px] font-bold font-montserrat xl:mb-2">События</span>
-                  <span class="text-[#1F1F1F]/50 uppercase tracking-widest text-[10px] font-montserrat">28 Августа
-                    2024</span>
-                </div>
-
-                <!-- Title + Link -->
-                <div class="col-span-1 xl:col-span-3 flex flex-col">
-                  <h4
-                    class="font-apparel text-[1.5rem] xl:text-[1.25rem] leading-[1.15] text-[#1F1F1F] mb-4 text-pretty">
-                    Дегустационный ужин под звёздами — открытие сезона
-                  </h4>
-                  <span
-                    class="font-montserrat uppercase tracking-widest text-[10px] font-bold text-[#5D1223] inline-flex items-center self-start">
-                    Читать <span
-                      class="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">→</span>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- SIDE NEWS ITEM 2 -->
-            <div class="flex flex-col group cursor-pointer">
-
-              <div class="grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 xl:gap-y-5">
-
-                <!-- Thumbnail -->
-                <div class="col-span-1 xl:col-span-2 aspect-video overflow-hidden shrink-0">
-                  <picture class="block w-full h-full">
-                    <source srcset="img/chess-tourism.avif" type="image/avif" />
-                    <source srcset="img/chess-tourism.webp" type="image/webp" />
-                    <img src="./img/chess-tourism.jpg" alt="Событие 2" class="w-full h-full object-cover" loading="lazy"
-                      decoding="async" draggable="false">
-                  </picture>
-                </div>
-
-                <!-- Meta (Tag + Date) -->
-                <div
-                  class="col-span-1 xl:col-span-1 flex flex-row xl:flex-col items-center xl:items-start justify-start pt-1 gap-4 xl:gap-0">
-                  <span
-                    class="text-[#C7A46A] uppercase tracking-widest text-[10px] font-bold font-montserrat xl:mb-2">Релизы</span>
-                  <span class="text-[#1F1F1F]/50 uppercase tracking-widest text-[10px] font-montserrat">12 Июля
-                    2024</span>
-                </div>
-
-                <!-- Title + Link -->
-                <div class="col-span-1 xl:col-span-3 flex flex-col">
-                  <h4
-                    class="font-apparel text-[1.5rem] xl:text-[1.25rem] leading-[1.15] text-[#1F1F1F] mb-4 text-pretty">
-                    Бюрнье Резерв 2019 — выходит ограниченный тираж
-                  </h4>
-                  <span
-                    class="font-montserrat uppercase tracking-widest text-[10px] font-bold text-[#5D1223] inline-flex items-center self-start">
-                    Читать <span
-                      class="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">→</span>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Экспонат</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2023</p>
           </div>
-        </div>
+        </a>
 
-        <!-- BOTTOM NAVIGATION (Desktop / Tablet) -->
+        <!-- 3: ВИНИСАЖ БЕЛОЕ -->
+        <a href="/wines/vinisage_white.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/vinisage_white.avif" type="image/avif">
+              <source srcset="img/bottles/vinisage_white.webp" type="image/webp">
+              <img src="./img/bottles/vinisage_white.png" alt="Винисаж"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Винисаж</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2025</p>
+          </div>
+        </a>
 
-        <div class="hidden md:flex mt-6 pt-4 border-t border-dark/10 justify-end">
-          <a href="/news"
-            class="font-montserrat uppercase tracking-widest text-[10px] md:text-[11px] font-bold text-dark hover:text-[#5D1223] transition-colors duration-300 flex items-center group">
-            Все новости
-            <span class="ml-3 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </a>
-        </div>
+        <!-- 4: ВИНИСАЖ КРАСНОЕ -->
+        <a href="/wines/vinisage_red.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/exhibit_red.avif" type="image/avif">
+              <source srcset="img/bottles/exhibit_red.webp" type="image/webp">
+              <img src="./img/bottles/exhibit_red.png" alt="Винисаж" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Винисаж</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2024</p>
+          </div>
+        </a>
 
+        <!-- 5: ВИНИСАЖ РОЗОВОЕ -->
+        <a href="/wines/vinisage_rose.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="rose"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/love_white.avif" type="image/avif">
+              <source srcset="img/bottles/love_white.webp" type="image/webp">
+              <img src="./img/bottles/love_white.png" alt="Винисаж" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Винисаж</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Розовое сухое • 2025</p>
+          </div>
+        </a>
 
-        <!-- MOBILE "ALL NEWS" BUTTON -->
-        <!-- mt-12 дает такой же отступ от ссылки "Читать", как и везде. Кнопка теперь inline-flex (не на всю ширину) -->
-        <div class="mt-12 md:hidden flex justify-center w-full">
-          <a href="/news"
-            class="inline-flex justify-center items-center px-12 py-4 border border-[#1F1F1F]/20 text-[#1F1F1F] uppercase tracking-widest text-[10px] font-bold font-montserrat active:bg-[#1F1F1F] active:text-[#F4F1EA] transition-colors">
-            Все новости
-          </a>
-        </div>
+        <!-- 6: ЛЮБЛЮ БЕЛОЕ -->
+        <a href="/wines/love_white.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/love_white.avif" type="image/avif">
+              <source srcset="img/bottles/love_white.webp" type="image/webp">
+              <img src="./img/bottles/love_white.png" alt="Люблю" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Люблю</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2025</p>
+          </div>
+        </a>
 
+        <!-- 7: ЛЮБЛЮ РОЗОВОЕ -->
+        <a href="/wines/love_rose.html" class="js-wine-card group flex flex-col items-center text-center cursor-pointer"
+          data-category="rose" style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/love_white.avif" type="image/avif">
+              <source srcset="img/bottles/love_white.webp" type="image/webp">
+              <img src="./img/bottles/love_white.png" alt="Люблю" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Люблю</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Розовое сухое • 2025</p>
+          </div>
+        </a>
 
-      </div> <!-- Закрытие MAIN GRID CONTAINER -->
+        <!-- 8: ЛЮБЛЮ КРАСНОЕ -->
+        <a href="/wines/love_red.html" class="js-wine-card group flex flex-col items-center text-center cursor-pointer"
+          data-category="red" style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/exhibit_red.avif" type="image/avif">
+              <source srcset="img/bottles/exhibit_red.webp" type="image/webp">
+              <img src="./img/bottles/exhibit_red.png" alt="Люблю" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Люблю</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2024</p>
+          </div>
+        </a>
+
+        <!-- 9: ВИОНЬЕ -->
+        <a href="/wines/viognier.html" class="js-wine-card group flex flex-col items-center text-center cursor-pointer"
+          data-category="white" style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/vinisage_white.avif" type="image/avif">
+              <source srcset="img/bottles/vinisage_white.webp" type="image/webp">
+              <img src="./img/bottles/vinisage_white.png" alt="Вионье" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Вионье</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2023</p>
+          </div>
+        </a>
+
+        <!-- 10: ШАРДОНЕ -->
+        <a href="/wines/chardonnay.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/love_white.avif" type="image/avif">
+              <source srcset="img/bottles/love_white.webp" type="image/webp">
+              <img src="./img/bottles/love_white.png" alt="Шардоне" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Шардоне</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2022</p>
+          </div>
+        </a>
+
+        <!-- 11: ПИНО ГРИ ПОЗДНИЙ СБОР -->
+        <a href="/wines/pinot_gris_late_harvest.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/vinisage_white.avif" type="image/avif">
+              <source srcset="img/bottles/vinisage_white.webp" type="image/webp">
+              <img src="./img/bottles/vinisage_white.png" alt="Пино гри поздний сбор"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Пино Гри Поздний Сбор</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сладкое • 2025</p>
+          </div>
+        </a>
+
+        <!-- 12: ПИНО ГРИ -->
+        <a href="/wines/pinot_gris.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/vinisage_white.avif" type="image/avif">
+              <source srcset="img/bottles/vinisage_white.webp" type="image/webp">
+              <img src="./img/bottles/vinisage_white.png" alt="Пино гри"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Пино Гри</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2023</p>
+          </div>
+        </a>
+
+        <!-- 13: ПИНО БЛАН -->
+        <a href="/wines/pinot_blanc.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="white"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/love_white.avif" type="image/avif">
+              <source srcset="img/bottles/love_white.webp" type="image/webp">
+              <img src="./img/bottles/love_white.png" alt="Пино блан" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Пино Блан</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Белое сухое • 2023</p>
+          </div>
+        </a>
+
+        <!-- 14: МЕРЛО -->
+        <a href="/wines/merlot.html" class="js-wine-card group flex flex-col items-center text-center cursor-pointer"
+          data-category="red" style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/elite_krasnostop.avif" type="image/avif">
+              <source srcset="img/bottles/elite_krasnostop.webp" type="image/webp">
+              <img src="./img/bottles/elite_krasnostop.webp" alt="Мерло"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Мерло</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2020</p>
+          </div>
+        </a>
+
+        <!-- 15: КРАСНОСТОП -->
+        <a href="/wines/krasnostop.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/exhibit_red.avif" type="image/avif">
+              <source srcset="img/bottles/exhibit_red.webp" type="image/webp">
+              <img src="./img/bottles/exhibit_red.png" alt="Красностоп"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Красностоп</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2024</p>
+          </div>
+        </a>
+
+        <!-- 16: СИРА -->
+        <a href="/wines/syrah.html" class="js-wine-card group flex flex-col items-center text-center cursor-pointer"
+          data-category="red" style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/exhibit_red.avif" type="image/avif">
+              <source srcset="img/bottles/exhibit_red.webp" type="image/webp">
+              <img src="./img/bottles/exhibit_red.png" alt="Сира" class="w-full h-full object-contain object-bottom"
+                loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Сира</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2024</p>
+          </div>
+        </a>
+
+        <!-- 17: МАЛЬБЕК -->
+        <a href="/wines/malbec.html" class="js-wine-card group flex flex-col items-center text-center cursor-pointer"
+          data-category="red" style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/elite_krasnostop.avif" type="image/avif">
+              <source srcset="img/bottles/elite_krasnostop.webp" type="image/webp">
+              <img src="./img/bottles/elite_krasnostop.webp" alt="Мальбек"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Мальбек</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2023</p>
+          </div>
+        </a>
+
+        <!-- 18: КАБЕРНЕ ФРАН -->
+        <a href="/wines/cabernet_franc.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/elite_krasnostop.avif" type="image/avif">
+              <source srcset="img/bottles/elite_krasnostop.webp" type="image/webp">
+              <img src="./img/bottles/elite_krasnostop.webp" alt="Каберне Фран"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Каберне Фран</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2020</p>
+          </div>
+        </a>
+
+        <!-- 19: КАБЕРНЕ СОВИНЬОН -->
+        <a href="/wines/cabernet_sauvignon.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/exhibit_red.avif" type="image/avif">
+              <source srcset="img/bottles/exhibit_red.webp" type="image/webp">
+              <img src="./img/bottles/exhibit_red.png" alt="Каберне Совиньон"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Каберне Совиньон</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2019</p>
+          </div>
+        </a>
+
+        <!-- 20: ЭЛИТНАЯ СЕРИЯ СИРА -->
+        <a href="/wines/elite_syrah.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/elite_krasnostop.avif" type="image/avif">
+              <source srcset="img/bottles/elite_krasnostop.webp" type="image/webp">
+              <img src="./img/bottles/elite_krasnostop.webp" alt="Сира Элитная Серия"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Сира</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2017</p>
+          </div>
+        </a>
+
+        <!-- 21: ЭЛИТНАЯ СЕРИЯ САПЕРАВИ -->
+        <a href="/wines/elite_saperavi.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/elite_krasnostop.avif" type="image/avif">
+              <source srcset="img/bottles/elite_krasnostop.webp" type="image/webp">
+              <img src="./img/bottles/elite_krasnostop.webp" alt="Саперави Элитная Серия"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Саперави</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2019</p>
+          </div>
+        </a>
+
+        <!-- 22: ЭЛИТНАЯ СЕРИЯ КРАСНОСТОП -->
+        <a href="/wines/elite_krasnostop.html"
+          class="js-wine-card group flex flex-col items-center text-center cursor-pointer" data-category="red"
+          style="text-decoration:none;">
+          <div class="relative w-full h-[320px] md:h-[380px] lg:h-[450px] flex items-end justify-center mb-6 md:mb-8">
+            <picture
+              class="absolute inset-0 block drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] transition-all duration-500 z-10">
+              <source srcset="img/bottles/elite_krasnostop.avif" type="image/avif">
+              <source srcset="img/bottles/elite_krasnostop.webp" type="image/webp">
+              <img src="./img/bottles/elite_krasnostop.webp" alt="Красностоп Элитная Серия"
+                class="w-full h-full object-contain object-bottom" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h2
+              class="font-apparel text-3xl lg:text-[32px] text-dark mb-2 uppercase tracking-widest group-hover:text-wine transition-colors duration-300">
+              Красностоп</h2>
+            <p class="font-montserrat text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60">
+              Красное сухое • 2015</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Сообщение "ничего не найдено" -->
+      <div id="js-no-results" class="hidden text-center py-32 font-apparel text-3xl text-dark/30">
+        В данной категории пока нет вин
+      </div>
     </section>
+
+
+    <!-- ========================= JAVASCRIPT ДЛЯ ФИЛЬТРА ========================= -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.js-filter-btn');
+        const wineCards = document.querySelectorAll('.js-wine-card');
+        const catalogGrid = document.querySelector('.js-catalog-grid');
+        const noResults = document.getElementById('js-no-results');
+        const countEl = document.getElementById('js-wine-count');
+
+        // 1. АВТОМАТИЧЕСКИЙ ПОДСЧЕТ ВИН ПРИ ЗАГРУЗКЕ
+        if (countEl) {
+          countEl.textContent = wineCards.length;
+        }
+
+        const updateActiveButton = (clickedBtn) => {
+          filterBtns.forEach(btn => {
+            btn.classList.remove('text-wine');
+            btn.classList.add('text-dark/40');
+          });
+          clickedBtn.classList.remove('text-dark/40');
+          clickedBtn.classList.add('text-wine');
+        };
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const filterValue = e.currentTarget.dataset.filter;
+            updateActiveButton(e.currentTarget);
+
+            catalogGrid.style.opacity = '0';
+
+            setTimeout(() => {
+              let visibleCount = 0;
+
+              wineCards.forEach(card => {
+                if (filterValue === 'all' || card.dataset.category === filterValue) {
+                  card.style.display = 'flex';
+                  visibleCount++;
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+
+              if (countEl) countEl.textContent = visibleCount;
+
+              if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+                catalogGrid.classList.add('hidden');
+              } else {
+                noResults.classList.add('hidden');
+                catalogGrid.classList.remove('hidden');
+              }
+
+              catalogGrid.style.opacity = '1';
+            }, 300);
+          });
+        });
+      });
+    </script>
+
   </main>
 
   <footer class="bg-wine text-paper pt-6 md:pt-8 pb-6 md:pb-3 border-t border-paper/10 font-sans rounded-none">
