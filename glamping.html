@@ -5,7 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Burnier new</title>
-
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <link rel="stylesheet" crossorigin href="./assets/style-B53V_xZh.css">
 </head>
 
@@ -20,7 +24,7 @@
         <nav
           class="hidden lg:flex w-2/5 justify-end items-center gap-10 whitespace-nowrap font-apparel text-[16px] font-normal leading-tight text-paper/90">
 
-          <a href="/wines.html" class="h-20 inline-flex items-center hover:text-paper transition">
+          <a href="#" class="h-20 inline-flex items-center hover:text-paper transition">
             <span
               class="relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:h-px after:bg-gold after:-bottom-1.5 after:opacity-0 hover:after:opacity-100 transition">
               Вина
@@ -244,7 +248,7 @@
 
         <nav class="flex-1">
           <!-- Главный активный пункт (Золотой текст) -->
-          <a href="/wines.html"
+          <a href=" #"
             class="mm-item block font-apparel text-[28px] font-medium leading-tight text-gold mb-8 transition-colors"
             style="--i:1">Вина</a>
 
@@ -326,473 +330,601 @@
 
 
 
-  <!-- ========================= HERO BLOCK ========================= -->
-  <section class="relative w-full flex items-center bg-dark" style="height: calc(100vh - 80px); min-height: 560px;">
 
-    <!-- 1. Фоновое изображение -->
-    <picture class="absolute inset-0 z-0">
-      <!-- Отдаем архитектуру без дерева всем телефонам, планшетам и мелким ноутам (до 1279px) -->
-      <source media="(max-width: 1279px)" srcset="img/hero_m.jpg">
-      <!-- Начиная с 1280px (xl) включаем центрирование десктопа. Всё, что меньше — жестко прибито к правому нижнему углу -->
-      <img src="./img/hero_d.jpg" alt="Винодельческий дом Бюрнье"
-        class="w-full h-full object-cover object-[right_bottom] xl:object-right" draggable="false" />
-    </picture>
-
-    <!-- 2. Мягкая тень для шапки (Короткая на мобиле, длинная и сверхплавная на десктопе)
-    <div
-      class="absolute top-0 inset-x-0 h-24 md:h-56 bg-gradient-to-b from-dark/30 via-dark/[0.02] to-transparent z-10 pointer-events-none">
-    </div> -->
-
-    <!-- 3. Очень легкая защита слева для мобилок (Убавили до /30, чтобы спасти розовое небо) -->
-    <div class="absolute inset-0 bg-gradient-to-r from-dark/25 to-transparent xl:hidden z-10 pointer-events-none"></div>
-
-    <!-- 4. Контент -->
-    <div class="relative z-20 w-full max-w-7xl mx-auto px-6">
-
-      <!-- Ограничитель ширины: на мобилках 85% экрана (чтобы не липнуть к краю), на десктопе 3xl -->
-      <div class="max-w-[85%] sm:max-w-xl lg:max-w-3xl text-paper -mt-12 md:-mt-20 drop-shadow-lg lg:drop-shadow-none">
-
-        <!-- Возвращаем Золото и увеличиваем шрифт для планшетов -->
-        <span
-          class="block font-montserrat text-[11px] md:text-[12px] text-gold font-bold uppercase tracking-[0.2em] mb-4">
-          Винодельческий дом Бюрнье
-        </span>
-
-        <!-- H1 -->
-        <h1 class="font-apparel text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight mb-6 tracking-tight">
-          Швейцарское <br class="sm:hidden">наследие.<br> Русский терруар.
-        </h1>
-
-        <!-- Подзаголовок -->
-        <p
-          class="font-montserrat text-[16px] md:text-lg text-paper/90 leading-relaxed mb-12 lg:mb-16 font-light relative z-20">
-          Премиальные вина, созданные потомственным швейцарским виноделом. Бескомпромиссное качество, ручной сбор и
-          уважение к природе с 2001 года.
-        </p>
-
-        <!-- Кнопки (одинакового размера) -->
-        <div class="flex flex-col sm:flex-row items-start gap-4 relative z-20">
-
-          <!-- Primary Button -->
-          <a href="#"
-            class="w-auto min-w-[260px] inline-flex justify-center items-center px-8 py-4 border border-transparent bg-wine text-paper font-montserrat text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-dark transition-colors duration-300">
-            Коллекция вин
-          </a>
-
-          <!-- Secondary Button -->
-          <a href="#"
-            class="w-auto min-w-[260px] inline-flex justify-center items-center px-8 py-4 border border-paper/60 bg-transparent text-paper font-montserrat text-[11px] font-bold uppercase tracking-widest hover:bg-paper hover:text-dark transition-colors duration-300">
-            Визит на винодельню
-          </a>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- Контейнер для всей страницы ниже Hero, чтобы текстура была единой -->
-  <main class="relative bg-paper overflow-hidden">
+  <!-- ========================= СТРАНИЦА: ГЛЭМПИНГ ========================= -->
+  <!-- ========================= СТРАНИЦА: ГЛЭМПИНГ ========================= -->
+  <main class="relative bg-paper overflow-hidden pt-12 xl:pt-16 pb-16 xl:pb-24 border-t border-dark/5">
 
     <!-- Текстура бумаги -->
     <div class="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-multiply bg-repeat"
       style="background-image: url('img/background.webp');"></div>
 
-    <!-- Блок Коллекции: уменьшили py-24 до py-12, чтобы сэкономить место сверху и снизу -->
-    <!-- Убавили верхние и нижние отступы секции (pt-6, pb-4) -->
-    <section
-      class="relative z-10 pt-6 pb-4 xl:pt-10 xl:pb-6 min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 w-full flex flex-col h-full relative">
+    <div class="relative z-10 w-full flex flex-col">
 
+      <!-- ============================================================
+           СТАНДАРТНЫЙ ЗАГОЛОВОК (Как на странице "Команда")
+      ============================================================ -->
+      <section class="max-w-7xl mx-auto px-6 w-full mb-12 xl:mb-16">
+        <span
+          class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-gold mb-4 block">
+          Эко-отдых
+        </span>
+        <h1 class="font-apparel text-4xl xl:text-5xl text-dark leading-tight tracking-tight text-balance">
+          Глэмпинг
+        </h1>
+      </section>
 
-        <!-- Заголовок: Сделали отступ вниз (mb-4 md:mb-6) равным отступу под бутылкой -->
-        <div class="sr-only">
-          <h2>Коллекция вин</h2>
-        </div>
-
-        <!-- Слайдер: Контейнер -->
-        <div class="flex flex-col items-center justify-center">
-
-          <!-- Сцена с бутылками (Возврат к стабильной absolute-версии) -->
-          <div
-            class="relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[340px] flex justify-center items-center mb-4 xl:mb-8 h-[40vh] md:h-[45vh] md:portrait:h-[50vh] lg:portrait:h-[56vh] xl:h-[45vh] max-xl:landscape:h-[40vh] min-h-[280px]">
-
-            <!-- ЛЕВАЯ БУТЫЛКА (Увеличен blur, снижена opacity, поднята выше -translate-y-[65%], отодвинута дальше right-[130%]) -->
-            <div
-              class="js-scene relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[340px] flex justify-center items-center mb-4 xl:mb-8 h-[40vh] md:h-[45vh] md:portrait:h-[50vh] lg:portrait:h-[56vh] xl:h-[45vh] max-xl:landscape:h-[40vh] min-h-[280px] touch-pan-y [--bottle-x:23] md:landscape:[--bottle-x:30] lg:portrait:[--bottle-x:26] lg:landscape:[--bottle-x:34] xl:[--bottle-x:38]">
-              <!-- бутылки рендерятся JS из массива wines -->
-            </div>
-
-          </div>
-
-          <!-- Текст: Расширили до max-w-xl, вернули ось симметрии -->
-          <div class="js-slide transition-opacity duration-500 text-center max-w-xl px-2 xl:px-4">
-            <h3 class="mb-2">
-              <a class="js-name block font-apparel text-3xl xl:text-4xl text-dark uppercase tracking-widest cursor-pointer transition-colors duration-300 hover:text-wine"
-                href="#" style="text-decoration:none;">
-                Красностоп
-              </a>
-            </h3>
-
-            <div
-              class="js-style font-montserrat text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.15em] text-wine/60 mb-4">
-              Красное сухое • 2015
-            </div>
-
-            <!-- Описание: Шрифт 12px мобила, 14px десктоп. Отступ вниз mb-5 -->
-            <p
-              class="js-description font-montserrat text-[12px] xl:text-[14px] text-dark/60 leading-relaxed mb-4 italic">
-              Самобытное и многогранное вино из российского автохтона Красностоп Золотовский. Глубокий сложный аромат с
-              многообразием оттенков: подвяленные черные ягоды, кожа, специи, кофе и тёмный шоколад.
-            </p>
-
-            <!-- Покупка: gap-5 задает ровное расстояние между ценой и кнопкой -->
-            <div class="flex flex-col items-center justify-center gap-4">
-              <span class="js-price font-montserrat text-2xl font-light text-dark tracking-wide">10 500 ₽</span>
-              <button
-                class="js-buy-btn px-12 py-3 bg-wine text-paper font-montserrat text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-dark transition-all duration-300">
-                Купить
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Подвал слайдера -->
-        <!-- Подвал слайдера: mt-6 вместо mt-12, pt-4 вместо pt-6 -->
+      <!-- ============================================================
+           БЛОК 1: ИНТРО (Светлый)
+      ============================================================ -->
+      <section class="w-full bg-transparent pb-16 xl:pb-24">
         <div
-          class="mt-6 flex flex-col md:flex-row items-center justify-between border-t border-dark/10 pt-4 relative w-full">
+          class="w-full max-w-7xl mx-auto flex flex-col xl:grid xl:grid-cols-2 gap-0 xl:gap-20 xl:items-start xl:px-6">
 
-          <div class="hidden md:block w-1/3"></div>
-
-          <!-- Точки слайдера -->
-          <div class="flex gap-3 justify-center w-full md:w-1/3 mb-6 md:mb-0">
-            <button data-index="0" aria-label="Слайд 1" class="js-dot w-2 h-2 rounded-full bg-wine"></button>
-            <button data-index="1" aria-label="Слайд 2"
-              class="js-dot w-2 h-2 rounded-full border border-dark/30 hover:border-wine transition-colors cursor-pointer"></button>
-            <button data-index="2" aria-label="Слайд 3"
-              class="js-dot w-2 h-2 rounded-full border border-dark/30 hover:border-wine transition-colors cursor-pointer"></button>
-            <button data-index="3" aria-label="Слайд 4"
-              class="js-dot w-2 h-2 rounded-full border border-dark/30 hover:border-wine transition-colors cursor-pointer"></button>
+          <!-- IMAGE -->
+          <div
+            class="order-1 xl:order-1 w-full overflow-hidden aspect-[4/3] sm:aspect-video xl:aspect-[4/3] shadow-sm xl:shadow-none">
+            <picture class="block w-full h-full">
+              <!-- <source srcset="/img/glamping_1.avif" type="image/avif" /> -->
+              <source srcset="img/chess-glamping.webp" type="image/webp" />
+              <img src="/img/glamping_1.jpg" alt="Глэмпинг Бюрнье" class="w-full h-full object-cover object-center"
+                loading="lazy" decoding="async" draggable="false">
+            </picture>
           </div>
 
-          <!-- Ссылка "Вся коллекция" -->
-          <div class="w-full md:w-1/3 flex justify-center md:justify-end">
-            <a href="#"
-              class="font-montserrat uppercase tracking-widest text-[10px] md:text-[11px] font-bold text-dark hover:text-[#5D1223] transition-colors duration-300 flex items-center group">
+          <!-- TEXT -->
+          <div
+            class="order-2 xl:order-2 w-full flex flex-col items-start px-8 py-14 sm:px-12 xl:px-0 xl:py-0 group/section">
+            <h2
+              class="font-apparel text-[2rem] sm:text-[2.5rem] xl:text-[3rem] leading-[1.1] text-dark mb-8 text-pretty">
+              Современные <br class="hidden xl:block"> модульные дома
+            </h2>
 
-              Вся коллекция
-              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-
-    <!-- ============================================================
-  ШАХМАТКА: ПРЕМИУМ-ВЕРСИЯ
-  — Используем grid для десктопа, меняем порядок через order.
-  — Убрали vh, используем min-h и padding для стабильности.
-  — Увеличили размер шрифтов для "дороговизны" восприятия.
-============================================================ -->
-    <!-- SEO-only заголовок секции -->
-    <h2 class="sr-only">Опыт и впечатления — винный туризм и эко-глэмпинг</h2>
-
-    <section class="relative z-10 py-12 xl:py-0">
-      <div class="max-w-7xl mx-auto xl:px-6">
-
-        <!-- На xl: шахматка. На мобиле: стек карточек с gap -->
-        <div class="flex flex-col xl:grid xl:grid-cols-2 gap-16 xl:gap-0
-            xl:min-h-[calc(100dvh-80px)]">
-
-          <!-- ROW 1 -->
-          <!-- На мобиле это flex-колонка с отступом между фото и текстом. На xl — растворяется в Grid -->
-          <div class="flex flex-col xl:contents">
-
-            <!-- TEXT (В коде идет первым для десктопа, но на мобиле опускаем его вниз через order-2) -->
-            <div class="order-2 xl:order-none bg-wine flex flex-col justify-center items-start
-                    px-8 py-12 sm:px-12 xl:px-16 xl:py-10 landscape:xl:py-6 group">
-              <!-- ... твой контент текста (span, h3, div, p, a) остается без изменений ... -->
-              <span class="block font-montserrat text-[11px] font-bold uppercase tracking-[0.3em] text-gold mb-5">
-                Искусство виноделия
-              </span>
-              <h3
-                class="font-apparel text-[1.75rem] sm:text-[2.5rem] xl:text-[2.5rem] leading-[1.1] sm:leading-[1.06] text-paper mb-5">
-                Философия органического виноделия
-              </h3>
-              <div class="w-16 h-px bg-gold mb-8 transition-all duration-[1000ms] ease-in-out xl:group-hover:w-24">
-              </div>
-              <p
-                class="font-montserrat text-[13px] xl:text-[14px] font-light text-paper/75 leading-relaxed mb-10 text-pretty">
-                Откройте для себя скрытую сторону создания великих вин. Приглашаем вас на неспешную прогулку по
-                виноградникам и спуск в прохладные погреба для дегустации наших лучших винтажей.
-              </p>
-              <a href="/tourism"
-                class="self-start inline-flex items-center justify-center px-8 py-4 border border-gold/40 hover:border-gold bg-transparent relative overflow-hidden group/btn transition-colors duration-500">
-                <span
-                  class="relative z-10 font-montserrat text-[11px] font-bold uppercase tracking-widest text-gold group-hover/btn:text-dark transition-colors duration-500">
-                  Перейти к программам
-                </span>
-                <div
-                  class="absolute inset-0 bg-gold transform translate-y-[105%] group-hover/btn:translate-y-0 transition-transform duration-500 ease-in-out">
-                </div>
-              </a>
+            <div
+              class="w-16 h-px bg-gold mb-8 transition-all duration-[1000ms] ease-in-out xl:group-hover/section:w-24">
             </div>
 
-            <!-- IMAGE (На мобиле поднимаем наверх через order-1) -->
-            <div class="order-1 xl:order-none overflow-hidden aspect-video xl:aspect-auto group">
-              <!-- ... твоя картинка (picture) без изменений ... -->
-              <picture class="block w-full h-full">
-                <source srcset="img/chess-tourism.avif" type="image/avif" />
-                <source srcset="img/chess-tourism.webp" type="image/webp" />
-                <img src="./img/chess-tourism.jpg" alt="Винный туризм — погреба и дегустация"
-                  class="w-full h-full object-cover object-left-center" loading="lazy" decoding="async" width="1200"
-                  height="800" draggable="false" />
-              </picture>
-            </div>
-
-          </div>
-
-          <!-- ROW 2 -->
-          <div class="flex flex-col xl:contents">
-
-            <!-- IMAGE -->
-            <div class="overflow-hidden
-                    aspect-video xl:aspect-auto group">
-              <picture class="block w-full h-full">
-                <source srcset="img/chess-glamping.avif" type="image/avif" />
-                <source srcset="img/chess-glamping.webp" type="image/webp" />
-                <img src="./img/chess-glamping.jpg" alt="Эко-глэмпинг — премиальные дома среди лоз"
-                  class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="800"
-                  draggable="false" />
-              </picture>
-            </div>
-
-            <!-- TEXT -->
-            <div class=" bg-dark flex flex-col justify-center items-start
-                    px-8 py-12 sm:px-12 xl:px-16 xl:py-10 landscape:xl:py-6 group">
-
-              <span class="block font-montserrat text-[11px] font-bold uppercase
-                       tracking-[0.3em] text-gold mb-5">
-                Эко-глэмпинг
-              </span>
-
-              <h3 class="font-apparel text-[1.75rem] sm:text-[2.5rem] xl:text-[2.5rem] leading-[1.1] sm:leading-[1.06]
-                     text-paper mb-5">
-                Премиальный комфорт среди лоз
-              </h3>
-
-              <div class="w-16 h-px bg-gold mb-8 transition-all duration-[1000ms] ease-in-out xl:group-hover:w-24">
-              </div>
-
-              <p class="font-montserrat text-[13px] xl:text-[14px] font-light text-paper/75
-                    leading-relaxed mb-10 text-pretty">
-                Просыпайтесь под шелест листьев вблизи природного заказника «Красная Горка». Наши автономные дома
-                из премиальных экоматериалов объединяют панорамный вид на виноградники, абсолютную тишину
-                и систему «Умный дом» для вашего уединения.
-              </p>
-
-              <a href="/glamping"
-                class="self-start inline-flex items-center justify-center px-8 py-4 border border-paper/30 hover:border-gold bg-transparent relative overflow-hidden group/btn transition-colors duration-500">
-                <span
-                  class="relative z-10 font-montserrat text-[11px] font-bold uppercase tracking-widest text-paper group-hover/btn:text-dark transition-colors duration-500">
-                  Перейти к глэмпингу
-                </span>
-                <div
-                  class="absolute inset-0 bg-gold transform translate-y-[105%] group-hover/btn:translate-y-0 transition-transform duration-500 ease-in-out">
-                </div>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-     БЛОК 2: НОВОСТИ И СОБЫТИЯ
-     ============================================================ -->
-    <!-- SECTION: JOURNAL / NEWS -->
-    <section class="py-16 xl:py-24">
-      <!-- <div class="max-w-7xl mx-auto px-6 xl:px-20"></div> -->
-      <div class="max-w-7xl mx-auto px-6">
-
-        <!-- HEADER -->
-        <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-12 xl:mb-16">
-          <div>
-            <span
-              class="text-[#C7A46A] uppercase tracking-[0.4em] text-[10px] mb-4 block font-montserrat font-bold">Журнал</span>
-            <h2 class="text-4xl xl:text-5xl font-serif text-[#1F1F1F] leading-tight">Новости и события</h2>
-          </div>
-
-        </div>
-
-        <!-- MAIN CONTAINER (Desktop: 50/50 Flex, Tablet/Mobile: Stacked) -->
-        <div class="flex flex-col xl:flex-row gap-12 xl:gap-20">
-
-          <!-- LEFT COLUMN: MAIN NEWS -->
-          <div class="w-full xl:w-[60%] flex flex-col group cursor-pointer">
-            <!-- Image 16:9 -->
-            <div class="overflow-hidden aspect-video mb-6 relative">
-              <picture class="block w-full h-full">
-                <!--<source srcset="/img/news-main.avif" type="image/avif" />
-            <source srcset="/img/news-main.webp" type="image/webp" /> -->
-                <img src="./img/hero_d.jpg" alt="Главная новость" class="w-full h-full object-cover" loading="lazy"
-                  decoding="async" draggable="false">
-              </picture>
-            </div>
-
-            <!-- Meta (Tag + Date) -->
-            <div class="flex items-center gap-4 mb-4 font-montserrat text-[10px] uppercase tracking-widest">
-              <span class="text-[#C7A46A] font-bold">Виноградник</span>
-              <span class="text-[#1F1F1F]/50">15 Сентября 2024</span>
-            </div>
-
-            <!-- Title -->
-            <h3 class="font-apparel text-[1.75rem] sm:text-[2rem] text-[#1F1F1F] leading-[1.15] mb-4 text-pretty">
-              Начало сбора урожая 2024: рекордный год для красных сортов
-            </h3>
-
-            <!-- Excerpt -->
             <p
-              class="font-montserrat text-[14px] font-light text-[#1F1F1F]/70 leading-relaxed mb-6 text-pretty max-w-[90%]">
-              Этот сезон обещает стать особенным. Идеальный баланс осадков и солнечных дней позволил ягодам достичь
-              фенольной зрелости, что гарантирует винтажу невероятный потенциал.
+              class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/75 leading-relaxed mb-8 text-pretty">
+              Винодельческий дом «БЮРНЬЕ» открыл глэмпинг из современных модульных домов премиум-класса с видом на
+              органические виноградники.
             </p>
 
-            <!-- Link -->
+            <!-- Акцентная врезка (Вариант 2) -->
+            <h3 class="font-apparel text-[1.25rem] xl:text-[1.5rem] leading-tight text-wine mb-8 text-pretty">
+              Три модульных экодома идеально вписываются в нашу концепцию по органическому виноградарству и бережному
+              отношению к природе.
+            </h3>
+
+            <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/75 leading-relaxed text-pretty">
+              Это позволит отдохнуть в самых комфортных условиях на природе, среди лоз, вблизи природного заказника
+              «Красная Горка».
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           БЛОК 2: МАНИФЕСТ + ЗЕРКАЛЬНАЯ ГАЛЕРЕЯ (ТЁМНЫЙ)
+      ============================================================ -->
+      <section class="w-full bg-dark py-16 xl:py-24">
+
+        <!-- Галерея с железобетонной фиксацией высоты -->
+        <div class="max-w-7xl mx-auto px-6">
+
+          <!-- На десктопе жестко фиксируем высоту: xl:h-[600px] -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:h-[480px]">
+
+            <!-- ЛЕВАЯ КОЛОНКА (Две горизонтальные). Используем flex-1 и min-h-0 для авто-подгонки -->
+            <div class="flex flex-col gap-4 md:gap-6 order-2 md:order-1 h-full min-h-0">
+              <div class="w-full flex-1 overflow-hidden min-h-[250px] xl:min-h-0 rounded-none">
+                <picture class="block w-full h-full">
+                  <source srcset="img/glamping/7.webp" type="image/webp" />
+                  <img src="/img/glamping_interior_2.jpg" alt="Детали интерьера" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="w-full flex-1 overflow-hidden min-h-[250px] xl:min-h-0 rounded-none">
+                <picture class="block w-full h-full">
+                  <source srcset="img/glamping/8.webp" type="image/webp" />
+                  <img src="/img/glamping_interior_3.jpg" alt="Вид из окна" class="w-full h-full object-cover">
+                </picture>
+              </div>
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА (Одна вертикальная). Отключаем aspect на десктопе -->
+            <div
+              class="w-full h-full overflow-hidden min-h-[300px] xl:min-h-0 aspect-square md:aspect-[3/4] xl:aspect-auto rounded-none order-1 md:order-2">
+              <picture class="block w-full h-full">
+                <source srcset="img/glamping/6.webp" type="image/webp" />
+                <img src="/img/glamping_interior_1.jpg" alt="Атмосфера глэмпинга" class="w-full h-full object-cover">
+              </picture>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- ============================================================
+           БЛОК 2: ХАРАКТЕРИСТИКИ ДОМОВ (СВЕТЛЫЙ)
+      ============================================================ -->
+      <section class="w-full bg-transparent py-16 xl:py-24">
+        <!-- Текст теперь темный (text-dark) -->
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+          <h2 class="font-apparel text-3xl md:text-4xl xl:text-[3.25rem] leading-[1.15] text-dark tracking-tight">
+            Идеальное место, чтобы провести время вдвоём
+          </h2>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-10">
+
+            <!-- РЯД 1 (Легкий). Золото заменено на бордовый (bg-wine), текст на text-dark/80 -->
+            <div class="flex items-center gap-4">
+              <div class="w-px h-8 bg-wine shrink-0"></div>
+              <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/80">Общая площадь дома 20 м²</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-px h-8 bg-wine shrink-0"></div>
+              <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/80">Шторы «блэкаут»</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-px h-8 bg-wine shrink-0"></div>
+              <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/80">Спальная зона, кухня,
+                санузел</p>
+            </div>
+
+            <!-- РЯД 2 (Насыщенный) -->
+            <div class="flex items-center gap-4">
+              <div class="w-px h-8 bg-wine shrink-0"></div>
+              <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/80">Система кондиционирования и
+                теплый пол</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-px h-8 bg-wine shrink-0"></div>
+              <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/80">Современная отделка
+                экологичными материалами уровня «премиум»</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-px h-8 bg-wine shrink-0"></div>
+              <p class="font-montserrat text-[13px] md:text-[14px] font-light text-dark/80">Блок автоматики с системой
+                «умный дом» и охранная система</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           БЛОК 3: АВТОНОМНОСТЬ (Темный)
+      ============================================================ -->
+      <section class="w-full bg-transparent xl:bg-graphite xl:py-24">
+        <div
+          class="w-full max-w-7xl mx-auto flex flex-col xl:grid xl:grid-cols-2 gap-0 xl:gap-20 xl:items-start xl:px-6">
+
+          <!-- IMAGE -->
+          <div
+            class="order-1 xl:order-2 w-full overflow-hidden aspect-[4/3] sm:aspect-video xl:aspect-video xl:mt-10 shadow-sm xl:shadow-none">
+            <picture class="block w-full h-full">
+              <!-- <source srcset="/img/glamping_2.avif" type="image/avif" /> -->
+              <source srcset="img/glamping/5.webp" type="image/webp" />
+              <img src="/img/glamping_2.jpg" alt="Автономные дома" class="w-full h-full object-cover object-center"
+                loading="lazy" decoding="async" draggable="false">
+            </picture>
+          </div>
+
+          <!-- TEXT (mb-14 для мобилки сохраняется, чтобы был зазор до светлой секции) -->
+          <div
+            class="order-2 xl:order-1 w-full bg-dark xl:bg-transparent text-paper flex flex-col items-start px-8 py-14 mb-14 sm:px-12 xl:px-0 xl:py-0 xl:mb-0 group/section">
             <span
-              class="font-montserrat uppercase tracking-widest text-[10px] font-bold text-[#5D1223] inline-flex items-center">
-              Читать <span
-                class="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">→</span>
+              class="block font-montserrat text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.2em] text-gold mb-6">
+              Экология
             </span>
-          </div>
 
-          <!-- VISUAL DIVIDER (TABLET/MOBILE ONLY) -->
-          <div class="w-full xl:hidden h-px bg-[#1F1F1F]/10 -my-2"></div>
+            <h2
+              class="font-apparel text-[2rem] sm:text-[2.5rem] xl:text-[3rem] leading-[1.1] text-paper mb-8 text-pretty">
+              Автономные дома
+            </h2>
 
-          <!-- RIGHT COLUMN: SECONDARY NEWS -->
-
-          <!-- RIGHT COLUMN: SECONDARY NEWS -->
-          <!-- На мобиле: 1 колонка. На планшетах (md, lg): 2 колонки рядом. На десктопе (xl): снова 1 колонка (друг под другом) -->
-          <div class="w-full xl:w-[40%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-12 md:gap-8 xl:gap-0">
-
-            <!-- SIDE NEWS ITEM 1 -->
-            <div class="flex flex-col group cursor-pointer xl:mb-16">
-
-              <!-- Сетка внутри карточки. 
-                   Мобила/Планшет: 1 колонка (все друг под другом). 
-                   Десктоп (xl): 3 колонки (картинка 2/3, мета 1/3) -->
-              <div class="grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 xl:gap-y-5">
-
-                <!-- Thumbnail -->
-                <div class="col-span-1 xl:col-span-2 aspect-video overflow-hidden shrink-0">
-                  <picture class="block w-full h-full">
-                    <source srcset="img/chess-glamping.avif" type="image/avif" />
-                    <source srcset="img/chess-glamping.webp" type="image/webp" />
-                    <img src="./img/chess-glamping.jpg" alt="Событие 1" class="w-full h-full object-cover" loading="lazy"
-                      decoding="async" draggable="false">
-                  </picture>
-                </div>
-
-                <!-- Meta (Tag + Date) -->
-                <div
-                  class="col-span-1 xl:col-span-1 flex flex-row xl:flex-col items-center xl:items-start justify-start pt-1 gap-4 xl:gap-0">
-                  <span
-                    class="text-[#C7A46A] uppercase tracking-widest text-[10px] font-bold font-montserrat xl:mb-2">События</span>
-                  <span class="text-[#1F1F1F]/50 uppercase tracking-widest text-[10px] font-montserrat">28 Августа
-                    2024</span>
-                </div>
-
-                <!-- Title + Link -->
-                <div class="col-span-1 xl:col-span-3 flex flex-col">
-                  <h4
-                    class="font-apparel text-[1.5rem] xl:text-[1.25rem] leading-[1.15] text-[#1F1F1F] mb-4 text-pretty">
-                    Дегустационный ужин под звёздами — открытие сезона
-                  </h4>
-                  <span
-                    class="font-montserrat uppercase tracking-widest text-[10px] font-bold text-[#5D1223] inline-flex items-center self-start">
-                    Читать <span
-                      class="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">→</span>
-                  </span>
-                </div>
-
-              </div>
+            <div
+              class="w-16 h-px bg-gold mb-8 transition-all duration-[1000ms] ease-in-out xl:group-hover/section:w-24">
             </div>
 
-            <!-- SIDE NEWS ITEM 2 -->
-            <div class="flex flex-col group cursor-pointer">
+            <ul class="space-y-6">
+              <li class="flex items-start">
+                <span class="text-gold mr-4 mt-0.5">—</span>
+                <p class="font-montserrat text-[13px] md:text-[14px] font-light text-paper/80 leading-relaxed">На 100%
+                  обеспечивают себя электричеством за счёт солнечных батарей</p>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold mr-4 mt-0.5">—</span>
+                <p class="font-montserrat text-[13px] md:text-[14px] font-light text-paper/80 leading-relaxed">
+                  Оборудованы накопительными баками по сбору и фильтрации дождевой воды</p>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold mr-4 mt-0.5">—</span>
+                <p class="font-montserrat text-[13px] md:text-[14px] font-light text-paper/80 leading-relaxed">
+                  Оборудованы встроенной станцией очистки сточных вод</p>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold mr-4 mt-0.5">—</span>
+                <p class="font-montserrat text-[13px] md:text-[14px] font-light text-paper/80 leading-relaxed">Не
+                  наносят вреда окружающей среде</p>
+              </li>
+            </ul>
+          </div>
 
-              <div class="grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 xl:gap-y-5">
+        </div>
+      </section>
 
-                <!-- Thumbnail -->
-                <div class="col-span-1 xl:col-span-2 aspect-video overflow-hidden shrink-0">
-                  <picture class="block w-full h-full">
-                    <source srcset="img/chess-tourism.avif" type="image/avif" />
-                    <source srcset="img/chess-tourism.webp" type="image/webp" />
-                    <img src="./img/chess-tourism.jpg" alt="Событие 2" class="w-full h-full object-cover" loading="lazy"
-                      decoding="async" draggable="false">
-                  </picture>
-                </div>
+      <!-- ============================================================
+           БЛОК 4: УДОБСТВА
+      ============================================================ -->
+      <section class="w-full bg-transparent py-16 xl:py-24">
+        <div class="max-w-6xl mx-auto px-6 text-center">
 
-                <!-- Meta (Tag + Date) -->
-                <div
-                  class="col-span-1 xl:col-span-1 flex flex-row xl:flex-col items-center xl:items-start justify-start pt-1 gap-4 xl:gap-0">
-                  <span
-                    class="text-[#C7A46A] uppercase tracking-widest text-[10px] font-bold font-montserrat xl:mb-2">Релизы</span>
-                  <span class="text-[#1F1F1F]/50 uppercase tracking-widest text-[10px] font-montserrat">12 Июля
-                    2024</span>
-                </div>
+          <h2 class="font-apparel text-3xl md:text-4xl xl:text-[3.25rem] leading-[1.15] text-dark mb-10">
+            Удобства нашего глэмпинга
+          </h2>
 
-                <!-- Title + Link -->
-                <div class="col-span-1 xl:col-span-3 flex flex-col">
-                  <h4
-                    class="font-apparel text-[1.5rem] xl:text-[1.25rem] leading-[1.15] text-[#1F1F1F] mb-4 text-pretty">
-                    Бюрнье Резерв 2019 — выходит ограниченный тираж
-                  </h4>
-                  <span
-                    class="font-montserrat uppercase tracking-widest text-[10px] font-bold text-[#5D1223] inline-flex items-center self-start">
-                    Читать <span
-                      class="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">→</span>
-                  </span>
-                </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-8">
 
-              </div>
+            <!-- Icon 1: Wi-Fi -->
+            <!-- Эталонный блок иконки -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <!-- SVG: размер w-25, цвет paper, при ховере группы — золото -->
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icons set glamping">
+                  <circle id="Ellipse 1" cx="60" cy="76" r="7.5" stroke="currentColor" stroke-width="1.5" />
+                  <path id="Ellipse 15"
+                    d="M47.7119 64.4024C47.4181 64.0896 47.2675 63.7757 47.2173 63.4698C47.167 63.1624 47.2122 62.8277 47.3674 62.4663C47.6838 61.7293 48.4424 60.9225 49.6145 60.1678C51.9462 58.6664 55.717 57.5 60.0017 57.5C64.2754 57.5 67.8337 58.7856 69.9359 60.3372C70.9934 61.1177 71.635 61.9298 71.8609 62.6329C71.9714 62.977 71.98 63.2855 71.9031 63.5586C71.8265 63.8307 71.6549 64.1033 71.3461 64.3606C70.673 64.9215 70.1791 65.0418 69.7108 64.99C69.1856 64.9319 68.6279 64.6565 67.8114 64.2374L67.7824 64.2225C66.1774 63.3987 63.9293 62.2448 60.0017 62.2448C56.2246 62.2448 53.7303 63.428 51.8975 64.2975C51.8115 64.3383 51.727 64.3784 51.6439 64.4176C50.6984 64.8641 50.0112 65.1594 49.4035 65.1989C48.8586 65.2344 48.3333 65.0638 47.7119 64.4024ZM39.394 54.2601C39.0306 53.8002 38.9074 53.3429 38.9536 52.8828C39.0013 52.4077 39.2351 51.8816 39.675 51.3161C40.5599 50.1788 42.184 49.004 44.2806 47.94C48.4627 45.8175 54.3138 44.2406 59.2142 44.2406C64.1103 44.2406 70.1064 45.9053 74.4913 48.0771C76.6874 49.1648 78.4316 50.3567 79.4323 51.4916C79.9321 52.0585 80.2173 52.5785 80.3089 53.0347C80.3962 53.4692 80.315 53.8739 80.0161 54.2679C79.6687 54.726 79.3384 54.9799 79.0152 55.1111C78.6936 55.2417 78.3327 55.2696 77.8901 55.1966C77.4402 55.1224 76.9254 54.9473 76.3112 54.6886C75.8185 54.481 75.2831 54.2292 74.6827 53.9467C74.5347 53.8771 74.3827 53.8056 74.2264 53.7324C71.0693 52.2546 66.4636 50.2479 59.2142 50.2479C51.9556 50.2479 47.6937 52.3502 44.8273 53.8791C44.6866 53.9541 44.5501 54.0273 44.4175 54.0984C43.8745 54.3896 43.3959 54.6462 42.9539 54.8556C42.4044 55.1159 41.9498 55.2839 41.5484 55.348C41.1592 55.4102 40.8243 55.3743 40.4988 55.2238C40.1642 55.0692 39.8016 54.7761 39.394 54.2601ZM30.9717 43.5071C30.353 42.3356 30.6564 41.0494 31.912 39.6674C33.1737 38.2788 35.3198 36.8997 38.0923 35.6778C43.626 33.239 51.485 31.5 59.2142 31.5C66.9408 31.5 75.5746 33.3613 81.816 35.869C84.9431 37.1254 87.4244 38.5264 88.8932 39.9037C89.628 40.5928 90.0737 41.2429 90.2484 41.8309C90.4155 42.3935 90.3447 42.9271 89.9797 43.4569C89.5926 44.0188 89.1155 44.3503 88.5396 44.519C87.9498 44.6918 87.2287 44.7015 86.3557 44.5619C84.5957 44.2805 82.3884 43.4254 79.7114 42.3738L79.5133 42.296C74.2288 40.2196 67.3256 37.5073 59.2142 37.5073C50.9904 37.5073 44.489 40.4178 39.7221 42.5682L39.6816 42.5865C37.2907 43.665 35.4022 44.5169 33.9244 44.7707C33.1934 44.8963 32.6163 44.8643 32.1544 44.677C31.7041 44.4943 31.3063 44.1407 30.9717 43.5071Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <!-- TEXT: Montserrat, paper, при ховере группы — золото. Минус-маргин -mt-4 -->
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-4">
+                Wi-Fi
+              </span>
+            </div>
+
+            <!-- Icon 2: Двуспальная кровать -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <svg class="w-25 h-25 text-dark group-hover:text-wine transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <path
+                    d="M30.1944 51.2383C30.5776 50.2963 31.4932 49.6803 32.5101 49.6803H87.4577C88.488 49.6803 89.4128 50.3124 89.787 51.2723L98.7595 74.2887C99.3985 75.9278 98.1895 77.6967 96.4302 77.6967H23.1475C21.3726 77.6967 20.163 75.8988 20.8318 74.2547L30.1944 51.2383Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M25.2769 64.0262C25.6598 63.0837 26.5757 62.4672 27.5931 62.4672H92.839C93.8811 62.4672 94.8139 63.1136 95.1798 64.0894L98.8315 73.8271C99.4444 75.4614 98.2362 77.2049 96.4906 77.2049H23.6371C21.8627 77.2049 20.6531 75.4079 21.321 73.7639L25.2769 64.0262Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect x="22.1394" y="77.2213" width="75.7213" height="11.7869" rx="2.5" stroke="currentColor"
+                    stroke-width="1.5" />
+                  <path
+                    d="M30.9918 37.1395C30.9918 36.2433 31.4643 35.4566 32.2418 35.1142C35.5588 33.6533 44.4089 30.5 59.0164 30.5C73.6728 30.5 83.1176 33.6745 86.6857 35.134C87.5121 35.4721 88.0246 36.2913 88.0246 37.2251V47.1639C88.0246 48.5446 86.9053 49.6639 85.5246 49.6639H33.4918C32.1111 49.6639 30.9918 48.5446 30.9918 47.1639V37.1395Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect x="37.8771" y="40.8279" width="19.6557" height="11.7869" rx="2.5" stroke="currentColor"
+                    stroke-width="1.5" />
+                  <rect x="61.4836" y="40.8279" width="19.6557" height="11.7869" rx="2.5" stroke="currentColor"
+                    stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-wine transition-colors duration-300 text-center leading-relaxed -mt-4">
+                Двуспальная<br>кровать
+              </span>
+            </div>
+
+            <!-- Icon 3: Гардероб -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <!-- SVG: размер w-25, цвет paper, плавный переход в золото -->
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <!-- Маска адаптирована под currentColor -->
+                  <mask id="mask0_hanger" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="44" y="24" width="72"
+                    height="62">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M115.082 24.5902H44.2623V35.6564C45.5741 35.3755 46.9315 35.3331 48.2689 35.5372C49.9007 35.7863 52.7995 36.9359 54.9317 39.0681C56.897 41.0334 57.541 44.2623 57.541 46.2296C57.541 48.1968 54.9317 48.1968 54.9317 46.2296C54.9317 44.2623 54.3761 42.1433 52.9679 40.6546C51.4703 39.0715 49.448 38 47.765 37.7388C46.5932 37.5569 45.4018 37.6196 44.2623 37.918V55.3453C44.4291 55.4168 44.5939 55.4863 44.756 55.5547C46.7185 56.3826 48.2987 57.0492 48.5135 59.1008C48.5563 59.5102 48.5436 59.9252 48.5308 60.3389C48.511 60.984 48.4913 61.626 48.6828 62.2388C49.2118 63.9312 50.5826 65.2818 52.3697 65.7417L82.8382 73.5819C85.5176 74.2714 87.3904 76.6872 87.3904 79.4538C87.3904 82.8025 84.6758 85.5171 81.3272 85.5171H44.2623V85.5738H115.082V24.5902ZM44.2623 64.4598C45.4662 63.439 45.9948 62.1441 46.2295 60.4918C46.2295 59.0594 45.3586 58.2217 44.2623 57.6165V64.4598Z"
+                      fill="white" />
+                  </mask>
+                </defs>
+                <g mask="url(#mask0_hanger)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M72.7869 55.5738C72.7869 52.623 69.0909 52.1958 67.3432 51.1264C65.5956 50.0569 64.1769 48.5255 63.2434 46.7007C62.3099 44.876 61.898 42.8288 62.0529 40.7847C62.2078 38.7407 62.9236 36.7791 64.1213 35.1161C65.3191 33.4531 66.9524 32.1532 68.8412 31.3598C70.7301 30.5663 72.8011 30.31 74.8262 30.6192C76.458 30.8683 79.3568 32.0178 81.4891 34.15C83.4543 36.1153 84.0983 39.3443 84.0983 41.3115C84.0983 43.2787 81.4891 43.2787 81.4891 41.3115C81.4891 39.3443 80.9335 37.2253 79.5252 35.7366C78.0277 34.1534 76.0053 33.0819 74.3223 32.8207C72.7288 32.5734 71.0992 32.7784 69.613 33.4132C68.1267 34.0479 66.8416 35.0878 65.8991 36.4182C64.9566 37.7486 64.3934 39.3179 64.2715 40.9531C64.1496 42.5884 64.4738 44.2261 65.2083 45.6859C65.9428 47.1457 67.0591 48.3709 68.4343 49.2264C71.5166 51.1441 74.7564 51.1797 75.0708 54.1828C75.1805 55.2307 74.9258 56.3151 75.2401 57.3208C75.7691 59.0131 77.14 60.3638 78.927 60.8236L109.395 68.6639C112.075 69.3533 113.948 71.7691 113.948 74.5358C113.948 77.3387 112.046 79.6973 109.462 80.3917C108.437 80.6674 107.358 80.5144 106.309 80.346L91.0836 77.9012C90.035 77.7328 88.9746 77.6482 87.9126 77.6482H60.5207C59.5192 77.6482 58.5192 77.7234 57.5289 77.8732L40.9996 80.374C40.0094 80.5238 38.9937 80.6601 38.0229 80.4144C35.4012 79.7508 33.4613 77.376 33.4613 74.5481C33.4613 71.7769 35.3439 69.3599 38.0308 68.6814L66.463 61.5019C70.9946 60.3576 72.365 58.5425 72.7869 55.5738ZM108.33 70.5133L74.058 62.6271C73.4598 62.4856 72.8367 62.4863 72.2388 62.6291L39.5122 70.5133C35.5503 71.4594 35.6461 76.676 38.8474 77.9793C39.8365 78.382 40.9449 78.1905 41.9996 78.0232L57.4592 75.5711C58.4957 75.4067 59.5435 75.3242 60.593 75.3242L87.8713 75.3252C88.9607 75.3252 90.0483 75.4143 91.1232 75.5915L105.826 78.0149C106.883 78.189 107.993 78.3879 108.987 77.9888C112.204 76.6969 112.31 71.4542 108.33 70.5133Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M46.2295 60.4918C46.2295 57.5409 42.5335 57.1138 40.7859 56.0443C39.0382 54.9749 37.6195 53.4434 36.686 51.6187C35.7526 49.794 35.3406 47.7468 35.4955 45.7027C35.6504 43.6586 36.3662 41.697 37.564 40.034C38.7617 38.371 40.395 37.0712 42.2839 36.2777C44.1727 35.4843 46.2438 35.228 48.2688 35.5371C49.9006 35.7862 52.7995 36.9358 54.9317 39.068C56.897 41.0333 57.541 44.2622 57.541 46.2295C57.541 48.1967 54.9317 48.1967 54.9317 46.2295C54.9317 44.2622 54.3761 42.1433 52.9678 40.6545C51.4703 39.0714 49.448 37.9999 47.7649 37.7387C46.1715 37.4913 44.5418 37.6964 43.0556 38.3311C41.5694 38.9659 40.2842 40.0058 39.3417 41.3362C38.3992 42.6666 37.836 44.2358 37.7141 45.8711C37.5922 47.5064 37.9164 49.1441 38.6509 50.6039C39.3854 52.0637 40.5017 53.2889 41.8769 54.1444C44.9593 56.0621 48.199 56.0977 48.5134 59.1007C48.6231 60.1487 48.3684 61.233 48.6827 62.2387C49.2117 63.9311 50.5826 65.2817 52.3697 65.7416L82.8381 73.5818C85.5175 74.2713 87.3903 76.6871 87.3903 79.4538C87.3903 82.2566 85.4885 84.6153 82.9048 85.3097C81.8792 85.5853 80.8003 85.4324 79.7517 85.264L64.5262 82.8191C63.4776 82.6508 62.4173 82.5662 61.3553 82.5662H33.9634C32.9619 82.5662 31.9618 82.6414 30.9716 82.7912L14.4422 85.2919C13.452 85.4418 12.4364 85.5781 11.4655 85.3323C8.84383 84.6688 6.90393 82.294 6.90393 79.4661C6.90393 76.6949 8.7865 74.2778 11.4734 73.5994L39.9056 66.4199C44.4372 65.2756 45.8077 63.4605 46.2295 60.4918ZM81.7724 75.4312L47.5006 67.545C46.9024 67.4036 46.2794 67.4043 45.6815 67.5471L12.9548 75.4312C8.99296 76.3773 9.08872 81.594 12.2901 82.8973C13.2791 83.3 14.3876 83.1084 15.4422 82.9411L30.9019 80.4891C31.9383 80.3247 32.9862 80.2421 34.0356 80.2422L61.3139 80.2432C62.4034 80.2432 63.491 80.3323 64.5659 80.5094L79.2684 82.9328C80.3252 83.107 81.436 83.3059 82.4298 82.9068C85.6468 81.6148 85.7522 76.3722 81.7724 75.4312Z"
+                  stroke="currentColor" stroke-width="1.5" />
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-4">
+                Гардероб
+              </span>
+            </div>
+
+            <!-- Icon 4: Кухонный гарнитур -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icons set glamping">
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <rect id="Rectangle 11" x="21.1558" y="35.9098" width="82.6066" height="54.082" rx="2.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 12" x="31.9755" y="44.7623" width="55.0656" height="36.377" rx="2.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Ellipse 10"
+                    d="M99.8279 51.1475C99.8279 53.5875 97.8499 55.5656 95.4099 55.5656C92.9698 55.5656 90.9918 53.5875 90.9918 51.1475C90.9918 48.7075 92.9698 46.7295 95.4099 46.7295C97.8499 46.7295 99.8279 48.7075 99.8279 51.1475Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Ellipse 11"
+                    d="M99.8279 67.8688C99.8279 70.3089 97.8499 72.2869 95.4099 72.2869C92.9698 72.2869 90.9918 70.3089 90.9918 67.8688C90.9918 65.4288 92.9698 63.4508 95.4099 63.4508C97.8499 63.4508 99.8279 65.4288 99.8279 67.8688Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 13" x="90.9918" y="79.1885" width="8.83606" height="1.95082" rx="0.97541"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Vector 7"
+                    d="M44.2623 54.0979C44.2623 54.0979 47.2131 54.0979 47.2131 57.5404C47.2131 60.9829 43.7705 62.4584 43.7705 65.901C43.7705 69.3437 46.2295 71.311 46.2295 71.311M57.541 54.0989C57.541 54.0989 60.4918 54.0989 60.4918 57.5414C60.4918 60.9838 57.0492 62.4594 57.0492 65.902C57.0492 69.3446 59.5082 71.312 59.5082 71.312M71.8033 54.0979C71.8033 54.0979 74.7541 54.0979 74.7541 57.5404C74.7541 60.9829 71.3115 62.4584 71.3115 65.901C71.3115 69.3437 73.7705 71.311 73.7705 71.311"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-2">
+                Кухонный гарнитур<br>(холодильник, СВЧ печь, плита)
+              </span>
+            </div>
+
+            <!-- Icon 5: Проектор -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icons set glamping">
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <rect id="Rectangle 14" x="15.2542" y="50.6639" width="88.5082" height="26.541" rx="2.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Ellipse 12"
+                    d="M98.8442 54.5901C98.8442 62.7341 92.2423 69.336 84.0983 69.336C75.9544 69.336 69.3524 62.7341 69.3524 54.5901C69.3524 46.4462 75.9544 39.8442 84.0983 39.8442C92.2423 39.8442 98.8442 46.4462 98.8442 54.5901Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Ellipse 13"
+                    d="M93.9262 54.5902C93.9262 60.018 89.5262 64.4181 84.0984 64.4181C78.6706 64.4181 74.2705 60.018 74.2705 54.5902C74.2705 49.1624 78.6706 44.7623 84.0984 44.7623C89.5262 44.7623 93.9262 49.1624 93.9262 54.5902Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 15" x="18.205" y="56.5656" width="22.6066" height="2.93443" rx="1.46721"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 16" x="18.205" y="62.4672" width="22.6066" height="2.93443" rx="1.46721"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 17" x="18.205" y="68.3689" width="22.6066" height="2.93443" rx="1.46721"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 18" x="22.1394" y="77.2213" width="75.7213" height="3.91803" rx="1.95901"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Vector 18"
+                    d="M71.8033 42.7869L59.5082 36.3935M84.0983 37.3771V24.5902M98.8524 43.2787L109.18 35.4099M71.8033 27.541L77.7049 38.3607M96.8852 27.541L91.9672 38.3607"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-4">
+                Проектор
+              </span>
+            </div>
+
+            <!-- Icon 6: Сейф -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <!-- SVG: размер w-25, цвет paper, плавный ховер в золото -->
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icons set glamping">
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <rect id="Rectangle 19" x="15.2541" y="32.959" width="88.5082" height="55.0656" rx="2.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 20" x="26.0738" y="38.8606" width="67.8525" height="42.2787" rx="2.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 21" x="36.8934" y="48.6968" width="21.6229" height="3.91803" rx="1.95902"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 22" x="24.1066" y="46.7295" width="3.91803" height="7.85246" rx="1.95902"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 23" x="24.1066" y="65.418" width="3.91803" height="7.85246" rx="1.95902"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect id="Rectangle 24" x="26.0738" y="88.041" width="67.8525" height="5.88525" rx="2.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Vector"
+                    d="M38.8607 58.0328C38.8607 57.7657 39.0772 57.5492 39.3443 57.5492H42.2951C42.5622 57.5492 42.7787 57.7657 42.7787 58.0328V60.9836C42.7787 61.2507 42.5622 61.4672 42.2951 61.4672H39.3443C39.0772 61.4672 38.8607 61.2507 38.8607 60.9836V58.0328ZM38.8607 63.9344C38.8607 63.6674 39.0772 63.4508 39.3443 63.4508H42.2951C42.5622 63.4508 42.7787 63.6674 42.7787 63.9344V66.8853C42.7787 67.1524 42.5622 67.3689 42.2951 67.3689H39.3443C39.0772 67.3689 38.8607 67.1524 38.8607 66.8853V63.9344ZM38.8607 69.8361C38.8607 69.569 39.0772 69.3525 39.3443 69.3525H42.2951C42.5622 69.3525 42.7787 69.569 42.7787 69.8361V72.7869C42.7787 73.054 42.5622 73.2705 42.2951 73.2705H39.3443C39.0772 73.2705 38.8607 73.054 38.8607 72.7869V69.8361ZM45.7459 58.0328C45.7459 57.7657 45.9624 57.5492 46.2295 57.5492H49.1803C49.4474 57.5492 49.6639 57.7657 49.6639 58.0328V60.9836C49.6639 61.2507 49.4474 61.4672 49.1803 61.4672H46.2295C45.9624 61.4672 45.7459 61.2507 45.7459 60.9836V58.0328ZM45.7459 63.9344C45.7459 63.6674 45.9624 63.4508 46.2295 63.4508H49.1803C49.4474 63.4508 49.6639 63.6674 49.6639 63.9344V66.8853C49.6639 67.1523 49.4474 67.3689 49.1803 67.3689H46.2295C45.9624 67.3689 45.7459 67.1524 45.7459 66.8853V63.9344ZM45.7459 69.8361C45.7459 69.569 45.9624 69.3525 46.2295 69.3525H49.1803C49.4474 69.3525 49.6639 69.569 49.6639 69.8361V72.7869C49.6639 73.054 49.4474 73.2705 49.1803 73.2705H46.2295C45.9624 73.2705 45.7459 73.054 45.7459 72.7869V69.8361ZM52.6311 58.0328C52.6311 57.7657 52.8477 57.5492 53.1148 57.5492H56.0656C56.3327 57.5492 56.5492 57.7657 56.5492 58.0328V60.9836C56.5492 61.2507 56.3327 61.4672 56.0656 61.4672H53.1148C52.8477 61.4672 52.6311 61.2507 52.6311 60.9836V58.0328ZM52.6311 63.9344C52.6311 63.6674 52.8477 63.4508 53.1148 63.4508H56.0656C56.3327 63.4508 56.5492 63.6674 56.5492 63.9344V66.8853C56.5492 67.1524 56.3327 67.3689 56.0656 67.3689H53.1148C52.8477 67.3689 52.6311 67.1524 52.6311 66.8853V63.9344ZM52.6311 69.8361C52.6311 69.569 52.8477 69.3525 53.1148 69.3525H56.0656C56.3327 69.3525 56.5492 69.569 56.5492 69.8361V72.7869C56.5492 73.054 56.3327 73.2705 56.0656 73.2705H53.1148C52.8477 73.2705 52.6311 73.054 52.6311 72.7869V69.8361Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Rectangle 41"
+                    d="M77.7049 55.5822H93.9262V66.3854H77.7049C75.8734 66.3854 74.5364 65.7036 73.6524 64.709C72.7601 63.7052 72.3032 62.3527 72.3032 60.9838C72.3032 59.6149 72.7601 58.2624 73.6524 57.2586C74.5364 56.264 75.8734 55.5821 77.7049 55.5822Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-2">
+                Сейф
+              </span>
+            </div>
+
+            <!-- Icon 7: Тропический душ -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <!-- SVG: размер w-25, цвет paper, плавный переход в золото при ховере -->
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <rect x="103.779" y="20.1721" width="3.91804" height="21.623" rx="1.95902" stroke="currentColor"
+                    stroke-width="1.5" />
+                  <rect x="99.8442" y="25.0902" width="3.91804" height="10.8033" rx="1.95902" stroke="currentColor"
+                    stroke-width="1.5" />
+                  <path
+                    d="M53.6066 28.0328C58.5246 28.0326 99.3443 28.0328 99.3443 28.0328V32.9508H53.6066V49.6721H48.1968V30.9836C48.1968 29.0164 48.6886 28.033 53.6066 28.0328Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                  <path
+                    d="M44.7852 54.5819C45.0375 51.8331 47.3493 49.6803 50.164 49.6803H51.1476C53.9622 49.6803 56.2741 51.8331 56.5264 54.5819H44.7852Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <rect x="23.1229" y="54.5984" width="55.0656" height="4.90164" rx="2.45082" stroke="currentColor"
+                    stroke-width="1.5" />
+                  <path
+                    d="M34.4263 63.9344C34.4263 73.7296 34.4263 79.2213 34.4263 89.0164M40.8197 63.9344C40.8197 73.7296 40.8197 79.2213 40.8197 89.0164M47.2132 63.9344V89.0164M53.6066 63.9344V89.0164M60 63.9344V89.0164M66.8853 63.9344V89.0164"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-4">
+                Тропический душ
+              </span>
+            </div>
+
+            <!-- Icon 8: Фен, тапочки, халат -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <!-- SVG: размер w-25, цвет paper, плавный переход в золото -->
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icons set glamping">
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <path id="Rectangle 53"
+                    d="M73.7705 39.003C73.7705 39.003 61.9672 35.6137 53.6066 33.9413C49.2867 33.0772 40.3713 32.7122 32.7627 32.5613C25.5158 32.4175 19.6721 38.3126 19.6721 45.561V45.561C19.6721 52.7602 25.4384 58.6301 32.6375 58.6732C39.3725 58.7136 47.4566 58.7069 53.6066 58.5313C66.3935 58.1662 73.7705 56.5926 73.7705 56.5926"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Vector 10" d="M81.6394 54.5968L73.2787 56.564V38.8591L81.6394 41.3181" stroke="currentColor"
+                    stroke-linecap="round" stroke-width="1.5" />
+                  <path id="Vector 11" d="M79.6721 40.3345L89.5082 35.4165V60.9903L79.6721 56.0722"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                  <path id="Rectangle 54"
+                    d="M48.8871 59.0231L54.0829 85.4225C54.6362 88.2341 52.8221 90.9668 50.0162 91.5482V91.5482C47.4741 92.0749 44.9308 90.6555 44.0446 88.2153L33.4426 59.0231"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path id="Vector 15"
+                    d="M92.9508 41.81C92.9508 41.81 93.4426 42.7941 96.8853 42.7941C100.328 42.7941 99.8361 41.3182 102.295 41.3182C104.754 41.3182 106.23 42.7941 106.23 42.7941M93.9344 47.2199C93.9344 47.2199 95.4099 48.6953 98.8525 48.6953C102.295 48.6953 104.262 46.7281 106.721 46.7281C109.18 46.7281 110.656 48.2035 110.656 48.2035M93.9344 53.6133C93.9344 53.6133 94.4263 54.5974 97.8689 54.5974C101.311 54.5974 100.82 53.1215 103.279 53.1215C105.738 53.1215 107.213 54.5974 107.213 54.5974"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                  <path id="Ellipse 14"
+                    d="M45.7295 45.7377C45.7295 50.0791 42.2102 53.5984 37.8688 53.5984C33.5275 53.5984 30.0082 50.0791 30.0082 45.7377C30.0082 41.3964 33.5275 37.8771 37.8688 37.8771C42.2102 37.8771 45.7295 41.3964 45.7295 45.7377Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-4">
+                Фен, тапочки, халат,<br>полотенце
+              </span>
+            </div>
+
+            <!-- Icon 9: Туалетно-косметические принадлежности -->
+            <div class="group flex flex-col items-center justify-start cursor-pointer">
+              <!-- SVG: размер w-25, цвет paper, плавный переход в золото -->
+              <svg class="w-25 h-25 text-dark group-hover:text-gold transition-colors duration-300"
+                viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <!-- Все stroke заменены на currentColor, толщина 1.5 -->
+                  <path
+                    d="M46.7377 27.0492H65.6186C65.8036 27.0492 65.9851 27.1005 66.1427 27.1975L71.8864 30.7321C72.1447 30.8911 72.3169 31.1588 72.3546 31.4598L72.5217 32.7969C72.6269 33.6386 71.7022 34.2208 70.9887 33.7621L66.1487 30.6506C65.9874 30.5469 65.7997 30.4918 65.6079 30.4918H46.7377C46.1854 30.4918 45.7377 30.0441 45.7377 29.4918V28.0492C45.7377 27.4969 46.1854 27.0492 46.7377 27.0492Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
+                  <path
+                    d="M59.0163 40.3279V32.4918C59.0163 31.3873 58.1209 30.4918 57.0163 30.4918H54.1311C53.0265 30.4918 52.1311 31.3873 52.1311 32.4918V40.3279"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M37.8198 63.8913C38.5007 55.3119 45.6616 48.6968 54.268 48.6968H56.8796C65.486 48.6968 72.6469 55.3119 73.3279 63.8913L75.6234 92.8136C75.9235 96.5943 72.9364 99.8279 69.1438 99.8279H42.0039C38.2113 99.8279 35.2242 96.5943 35.5242 92.8136L37.8198 63.8913Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M61.9673 49.6721V44.3279C61.9673 42.1187 60.1764 40.3279 57.9673 40.3279H52.1968C49.9876 40.3279 48.1968 42.1187 48.1968 44.3279V50.1639"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M83.1066 32.9508C83.1066 34.576 81.7891 35.8934 80.1639 35.8934C78.5388 35.8934 77.2213 34.576 77.2213 32.9508C77.2213 31.3256 78.5388 30.0082 80.1639 30.0082C81.7891 30.0082 83.1066 31.3256 83.1066 32.9508Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="85.5738" cy="26.5574" r="1.46721" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="81.6393" cy="40.3278" r="1.46721" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M37.8688 62.459H72.7869M35.9016 89.0164H75.2459" stroke="currentColor" stroke-linecap="round"
+                    stroke-width="1.5" />
+                  <path
+                    d="M61.4672 78.1967C61.4672 81.4516 58.8286 84.0902 55.5737 84.0902C52.3189 84.0902 49.6803 81.4516 49.6803 78.1967C49.6803 77.4006 49.934 76.3169 50.3725 75.1105C50.8075 73.914 51.41 72.6357 52.0743 71.4634C52.7399 70.289 53.4583 69.2373 54.1199 68.4868C54.4514 68.1107 54.7571 67.8235 55.0237 67.6341C55.3011 67.4372 55.4815 67.3853 55.5737 67.3853C55.666 67.3853 55.8464 67.4372 56.1238 67.6341C56.3904 67.8235 56.6961 68.1107 57.0276 68.4868C57.6892 69.2373 58.4076 70.289 59.0732 71.4634C59.7375 72.6357 60.3399 73.914 60.7749 75.1105C61.2135 76.3169 61.4672 77.4006 61.4672 78.1967Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <span
+                class="font-montserrat text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-dark group-hover:text-gold transition-colors duration-300 text-center leading-relaxed -mt-2">
+                Туалетно-косметические<br>принадлежности
+              </span>
             </div>
 
           </div>
         </div>
+      </section>
 
-        <!-- BOTTOM NAVIGATION (Desktop / Tablet) -->
-
-        <div class="hidden md:flex mt-6 pt-4 border-t border-dark/10 justify-end">
-          <a href="/news"
-            class="font-montserrat uppercase tracking-widest text-[10px] md:text-[11px] font-bold text-dark hover:text-[#5D1223] transition-colors duration-300 flex items-center group">
-            Все новости
-            <span class="ml-3 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </a>
+      <!-- ============================================================
+           БЛОК 5: РЕЕСТР ПОЧЕТА (ТЁМНЫЙ)
+      ============================================================ -->
+      <section class="w-full bg-dark py-16 xl:py-24 flex flex-col items-center justify-center">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          <p class="font-apparel text-[1.5rem] md:text-[2rem] leading-[1.2] text-paper text-balance">
+            Винодельческий дом «БЮРНЬЕ» включен в Федеральный реестр <span class="text-gold">«Всероссийская книга
+              почета»</span> 2023 года на основании рекомендаций органов исполнительной власти Новороссийска.
+          </p>
+          <div class="w-16 h-px bg-gold mx-auto mt-8 mb-8"></div>
+          <p class="font-montserrat text-[13px] md:text-[14px] font-light text-paper/70 text-balance mx-auto max-w-2xl">
+            В реестр попадают лучшие организации и предприятия России, которые способствуют всестороннему развитию
+            территории и отрасли.
+          </p>
         </div>
+      </section>
 
+      <!-- ============================================================
+           БЛОК 6: ПЛАШКА БРОНИРОВАНИЯ (Reservation Banner)
+      ============================================================ -->
+      <section class="w-full py-12 xl:py-16">
+        <div class="max-w-7xl mx-auto px-0 md:px-6">
 
-        <!-- MOBILE "ALL NEWS" BUTTON -->
-        <!-- mt-12 дает такой же отступ от ссылки "Читать", как и везде. Кнопка теперь inline-flex (не на всю ширину) -->
-        <div class="mt-12 md:hidden flex justify-center w-full">
-          <a href="/news"
-            class="inline-flex justify-center items-center px-12 py-4 border border-[#1F1F1F]/20 text-[#1F1F1F] uppercase tracking-widest text-[10px] font-bold font-montserrat active:bg-[#1F1F1F] active:text-[#F4F1EA] transition-colors">
-            Все новости
-          </a>
+          <div
+            class="bg-dark text-paper px-8 py-16 md:py-20 flex flex-col items-center text-center shadow-2xl shadow-dark/20 md:rounded-none">
+
+            <span
+              class="block font-montserrat text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.2em] text-gold mb-6">
+              Бронирование
+            </span>
+
+            <h2
+              class="font-apparel text-[2rem] sm:text-[2.5rem] xl:text-[3rem] leading-[1.1] text-paper mb-8 text-pretty">
+              Контакты отдела бронирования
+            </h2>
+
+            <div class="w-16 h-px bg-gold mb-10"></div>
+
+            <a href="tel:+79282392209"
+              class="font-apparel text-[2.5rem] sm:text-[3rem] xl:text-[4rem] text-paper hover:text-gold transition-colors duration-300 leading-none mb-6">
+              +7 928-239-22-09
+            </a>
+
+            <a href="mailto:glamping@grand-vino.ru"
+              class="font-montserrat text-[14px] md:text-[15px] font-light text-paper/60 hover:text-paper transition-colors duration-300 tracking-widest">
+              glamping@grand-vino.ru
+            </a>
+
+          </div>
+
         </div>
+      </section>
 
+      <!-- ============================================================
+           СПЕЙСЕР: Воздух перед подвалом
+      ============================================================ -->
+      <div class="w-full h-8 xl:h-12 bg-transparent relative z-10"></div>
 
-      </div> <!-- Закрытие MAIN GRID CONTAINER -->
-    </section>
+    </div>
   </main>
+
+
+
+
 
   <footer class="bg-wine text-paper pt-6 md:pt-8 pb-6 md:pb-3 border-t border-paper/10 font-sans rounded-none">
     <div class="container max-w-7xl mx-auto px-6">
